@@ -15,22 +15,6 @@ mongoose.model('User', UserSchema);
 User = mongoose.model('User');
 
 /**
-* Connects to database
-* @param cb {Function} Callback to be executed;
-*/    
-exports.connect = function(cb){
-    mongoose.connect(cb);
-};
-
-/**
-* Discinnects from database
-* @param cb {Function} Callback to be executed;
-*/
-exports.disconnect = function(cb){
-    mongoose.disconnect(cb);
-};
-
-/**
 * Adds new record to database
 * 
 * @param o {Object} Object to be created;

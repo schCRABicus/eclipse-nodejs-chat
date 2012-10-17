@@ -1,9 +1,5 @@
 var dao = require('../dao/UserDAO.js');
 
-exports.connect = function(cb){
-    dao.connect(cb);
-};
-
 exports.addUser = function(o, cb){
     dao.create(o, cb);
 };
