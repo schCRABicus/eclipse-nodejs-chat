@@ -1,10 +1,7 @@
 var util = require('util');
 var mapping = exports.mapping = {
     get : {
-       '/index' : {
-	       filter : true,
-		   handler : showMain
-       }
+       '/index' : showMain
     },
     post : {
     

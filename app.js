@@ -42,6 +42,8 @@ app.use(express.session({
     store : store,
     secret : 'very-hard-secret-key'
 }));
+
+//setting path to resolve static references from web pages;
 app.use(express.static('src/views'));
 
 app.configure(function(){
