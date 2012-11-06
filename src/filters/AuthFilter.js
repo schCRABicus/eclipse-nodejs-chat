@@ -1,10 +1,11 @@
 var mapping = exports.mapping = {
 	get : {
-		'/index' : checkAuthentication
+		'/index' : checkAuthentication,
+		'/chat/wait' : checkAuthentication
 	},
 	post : {
-
-	}
+       '/chat/add' : checkAuthentication
+    }
 };
 
 function checkAuthentication(req, res, next){

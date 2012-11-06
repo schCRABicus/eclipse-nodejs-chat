@@ -1,5 +1,6 @@
 var mongoose = require('mongoose'),
 	Schema = mongoose.Schema,
+	UserDAO = require('./UserDAO.js'),
 	Record;
 
 /*
@@ -43,7 +44,9 @@ var read = exports.read = function(id, cb){
 		if (err){
 			cb(err, null);
 		} else {
-			cb(null, entry);
+			_addAuthorDependency(entry, function(){
+				cb(null, entry)
+			});
 		}
 	});
 };
@@ -103,7 +106,37 @@ exports.list = function(cb){
 		if (err){
 			cb(err, null);
 		} else{
-			cb(null, entries);
+			var l = entries.length,
+				s = 0,
+				_cbCaller;
+			entries.forEach(function(entry){
+				_addAuthorDependency(entry, function(){
+					s++;
+				});
+			});
+			_cbCaller = function(){
+				if (s == l){
+					cb(null, entries);
+				} else{
+					setTimeout(_cbCaller, 1);
+				}
+			};
+			_cbCaller();
 		}
 	});
 };
+
+/**
+ * Loads author name by its id;
+ *
+ * @param entry
+ * @param cb
+ */
+var _addAuthorDependency = function(entry, cb){
+	UserDAO.read(entry.authorId, function(err, u){
+		if (!err && u){
+			entry.author = u.login;
+		}
+		cb();
+	});
+}

@@ -7,88 +7,132 @@
     <script type="text/javascript" src="js/frameworks/jquery/jquery-1.8.2.js"><!--keep--></script>
     <script type="text/javascript" src="js/validator.js"><!-- keep --></script>
     <script type="text/javascript" src="js/authHelper.js"><!-- keep --></script>
+    <script type="text/javascript" src="js/localeHelper.js"><!-- keep --></script>
 
     <link href="css/auth.css" rel="stylesheet" type="text/css" />
 </head>
-<body onload="authHelper.init('<%= selectedTab %>');">
+<body onload="authHelper.init('<%= selectedTab %>');localeHelper.init('<%=i18n.lng()%>');">
 
     <div id="tabContainer">
 
+        <span id="locale" style="float:right;">
+            <select id="selectLocale">
+                <option value="en" >En</option>
+                <option value="ru" >Ru</option>
+            </select>
+        </span>
+
         <ul id="menuList">
-            <li><span class="login">Login</span></li>
-            <li><span class="register">Register</span></li>
+            <li><span class="login"><%= t('Login') %></span></li>
+            <li><span class="register"><%= t('Register') %></span></li>
         </ul>
 
-        <div id="loginTab" class='panel_wrapper' style='display:none;'>
-            <form id="loginForm" onsubmit="return false;">
-                <table>
-                    <tr>
-                        <td>
-                            User :
-                        </td>
-                        <td>
-                            <input type="text" name="login" value=""/><br />
-                        </td>
-                        <td>
+        <div class="wrapper">
+            <span id="globalMessageHolder"></span>
 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Password :
-                        </td>
-                        <td>
-                            <input type="password" name="password" value=""/><br />
-                        </td>
-                        <td>
+            <div id="loginTab" class='panel_wrapper' style='display:none;'>
+                <form id="loginForm" onsubmit="return false;">
+                    <table>
+                        <tr>
+                            <td>
+                                <%= t('User') %> :
+                            </td>
+                            <td>
+                                <input type="text" name="login" value="" /><br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <input type="submit" id="submitLogin" value="Submit" />
-                        </td>
-                        <td>
+                            </td>
+                            <td>
+                                <span id="login_loginErrorHolder" class="errorMessage"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <%= t('Password') %> :
+                            </td>
+                            <td>
+                                <input type="password" name="password" value=""/><br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
 
-                        </td>
-                    </tr>
-                </table>
-            </form>
-        </div>
-        <div id="registerTab" class='panel_wrapper' style='display:none;'>
-            <form id="registerForm" onsubmit="return false;">
-                <table>
-                    <tr>
-                        <td>
-                            User :
-                        </td>
-                        <td>
-                            <input type="text" id="rlogin" name="login" value=""/><br />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Password :
-                        </td>
-                        <td>
-                            <input type="password" id="rpass" name="password" value=""/><br />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Confirm assword :
-                        </td>
-                        <td>
-                            <input type="password" id="rcpass" name="cpassword" value=""/><br />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <input type="submit" id="submitRegister" value="Submit" />
-                        </td>
-                    </tr>
-                </table>
-            </form>
+                            </td>
+                            <td>
+                                <span id="login_passwordErrorHolder" class="errorMessage"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <input type="submit" id="submitLogin" value="Submit" />
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <div id="registerTab" class='panel_wrapper' style='display:none;'>
+                <form id="registerForm" onsubmit="return false;">
+                    <table>
+                        <tr>
+                            <td>
+                                <%= t('User') %> :
+                            </td>
+                            <td>
+                                <input type="text" id="rlogin" name="login" value=""/><br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+
+                            </td>
+                            <td>
+                                <span id="register_loginErrorHolder" class="errorMessage"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <%= t('Password') %> :
+                            </td>
+                            <td>
+                                <input type="password" id="rpass" name="password" value=""/><br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+
+                            </td>
+                            <td>
+                                <span id="register_passwordErrorHolder" class="errorMessage"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <%= t('CPassword') %> :
+                            </td>
+                            <td>
+                                <input type="password" id="rcpass" name="cpassword" value=""/><br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+
+                            </td>
+                            <td>
+                                <span id="register_cpasswordErrorHolder" class="errorMessage"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <input type="submit" id="submitRegister" value="Submit" />
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+
         </div>
 
     </div>

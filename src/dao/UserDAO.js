@@ -1,6 +1,5 @@
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema,
-    dburl = 'mongodb://localhost/nodejs-first-chat',
     User;
 
 /**
@@ -42,7 +41,7 @@ exports.read = function(id, cb){
         if (err){
             cb(err, null);
         } else {
-            cb(null, entries);
+            cb(null, entry);
         }
     });
 };

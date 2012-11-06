@@ -24,6 +24,7 @@ var authHelper = (function(){
 				'pwds' : 'passwordsMatch'
 			}
 		},
+		_globalMessageHolder,
 
 	//private methods
 		_initTabs = function(){
@@ -54,22 +55,24 @@ var authHelper = (function(){
 					data = {};
 
 				if (_state == _states.ready){
+					_clearErrors();
 					$.each(params, function(i, item){
 						data[item.name] = item.value;
 					});
 
-					validator.validate(data, _validationConfig.login);
-					if (validator.hasErrors()){
-						console.log(validator.getErrors());
-					} else {
+					if ( !_validate( data, 'login' ) ) {
 						$.ajax({
 							url : _paths.login,
 							type : 'POST',
 							dataType : 'json',
 							data : data,
 							success : function(data){
-								console.log('response on login : ', data);
-								_redirect(_paths.index);
+								if (data && data.status && data.status.toLowerCase() == "ok"){
+									_redirect(_paths.index);
+								} else {
+									data = data || {};
+									_globalMessageHolder.append(data.message || "Something failed");
+								}
 							},
 							error : function(e){
 								console.log('error on login : ', e);
@@ -81,9 +84,6 @@ var authHelper = (function(){
 		    });
 		},
 
-		_redirect = function(destination){
-			window.location.href = destination;
-		}
 
 		/**
 		 * Private initializer;
@@ -98,25 +98,27 @@ var authHelper = (function(){
 				var self = $(this),
 					params = self.serializeArray(),
 					data = {};
-
+				console.log(_state);
 			    if (_state == _states.ready){
+				    _clearErrors();
 					$.each(params, function(i, item){
 						data[item.name] = item.value;
 					});
 					data.pwds = [data.password, data.cpassword];
 
-					validator.validate(data, _validationConfig.register);
-					if (validator.hasErrors()){
-						console.log(validator.getErrors());
-					} else {
+					if ( !_validate(data, 'register' )) {
 						$.ajax({
 							url : _paths.register,
 							type : 'POST',
 							dataType : 'json',
 							data : data,
 							success : function(data){
-								console.log('response on registration : ', data);
-								_redirect(_paths.login);
+								if (data && data.status && data.status.toLowerCase() == "ok"){
+									_redirect(_paths.login);
+								} else {
+									data = data || {};
+									_globalMessageHolder.append(data.message || "Something failed");
+								}
 							},
 							error : function(e){
 								console.log('error on registration : ', e);
@@ -132,7 +134,7 @@ var authHelper = (function(){
 				if (l){
 					_state = _states.waiting;
 					$.ajax({
-						url : '/register/check/login',
+						url : _paths.checkLogin,
 						dataType : 'json',
 						data : {
 							login : l
@@ -141,8 +143,10 @@ var authHelper = (function(){
 							console.log(data);
 							if (data && data.has){
 								_state = _states.error;
+								$('#register_loginErrorHolder').text("Such user already exists");
 							} else {
 								_state = _states.ready;
+								$('#register_loginErrorHolder').empty();
 							}
 						},
 						error : function(err){
@@ -155,11 +159,47 @@ var authHelper = (function(){
 
 		},
 
+		_validate = function(data, state){
+			var hasErrs, k, f, errs;
+
+			validator.validate(data, _validationConfig[state]);
+			if (hasErrs = validator.hasErrors()){
+				errs = validator.getErrors();
+				$.each(errs, function(i, err){
+					for ( k in err ){
+						if (err.hasOwnProperty(k)){
+							f = $('#' + state + '_' + k + 'ErrorHolder');
+							if (f.length){
+								f.text(err[k]);
+							} else {
+								_globalMessageHolder.append(err[k]);
+							}
+						}
+					}
+				});
+			}
+
+			return hasErrs;
+		},
+
+		_clearErrors = function(){
+			$('.errorMessage').each(function(i, item){
+				$(item).empty();
+			});
+			_globalMessageHolder.empty();
+		},
+
+		_redirect = function(destination){
+			window.location.href = destination;
+		},
+
 		init = function(selectedTab){
 
 			_initTabs();
 			_initLoginForm();
 			_initRegisterForm();
+
+			_globalMessageHolder = $("#globalMessageHolder");
 
 			if (_selectTab.hasOwnProperty(selectedTab)){
 				_selectTab[selectedTab]();

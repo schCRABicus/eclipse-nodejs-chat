@@ -26,13 +26,14 @@
 					}
 					checker = types[type];
 					if (!checker){
-						_messages.push('There is no handler to validate ' + type + ' type;');
+						_messages.push({'General' : 'There is no handler to validate ' + type + ' type;'});
 						continue;
 					}
 
 					res = checker.validate(data[i]);
 					if (!res){
-						msg = 'Invalid value for *' + i + '*, ' + checker.instructions;
+						msg = {};
+						msg[i] = 'Invalid value for *' + i + '*, ' + checker.instructions;
 						_messages.push(msg);
 					}
 				}

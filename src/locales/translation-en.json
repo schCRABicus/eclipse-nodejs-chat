@@ -1,0 +1,9 @@
+{
+    "Login" : "Login",
+	"Register" : "Register",
+	"User" : "User",
+	"Password" : "Password",
+	"CPassword" : "Confirm password",
+    "Enter_your_comment" : "Enter your comment",
+    "Send" : "Send"
+}

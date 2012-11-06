@@ -30,7 +30,7 @@ var listAllLogins = exports.listAllLogins = function(cb){
 };
 
 exports.containsUser = function(o, cb){
-    var hasUser = false;
+    var result = {hasUser : false, u : {}};
     if (o){
         dao.list(function(err, entries){
             if (err){
@@ -38,10 +38,11 @@ exports.containsUser = function(o, cb){
             }
             entries.forEach(function(u){
                 if (u.login == o.login && u.password == o.password){
-                    hasUser = true;
+                    result.hasUser = true;
+	                result.u = u;
                 }
             });
-	        cb(hasUser);
+	        cb(result);
         }); 
     }
 

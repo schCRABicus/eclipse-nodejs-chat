@@ -13,7 +13,7 @@ exports.mapping = {
     }
 };
 
-function renderLoginPage(req, res, next){ console.log("***********request /login*********************");console.log(req.url);
+function renderLoginPage(req, res, next){
     res.render(
 	    'auth.html',
 	    {
@@ -22,7 +22,7 @@ function renderLoginPage(req, res, next){ console.log("***********request /login
     );
 }
 
-function renderRegisterPage(req, res, next){   console.log("***********request /register*********************");console.log(req.url);
+function renderRegisterPage(req, res, next){
 	res.render(
 	    'auth.html',
 	    {
@@ -36,11 +36,11 @@ function processLogin(req, res, next){
         login : req.body.login,
         password : req.body.password
     };
-    UserService.containsUser(user, function(hasUser){
-	    if (!hasUser){
+    UserService.containsUser(user, function(result){
+	    if (!result.hasUser){
 		    res.json({status : "Fail", message : "Such combination of login/password doesn't exist"});
 		} else {
-			req.session.user = user.login;
+			req.session.user = {_id : result.u._id, login : result.u.login};
 		    res.json({status : "OK", message : "You have successfully logged in"});
 		    //res.redirect('/index');
 		}
@@ -57,10 +57,8 @@ function processRegister(req, res, next){
 		    UserService.addUser(user, function(err){
 			    if(err){
 				    util.log("error on adding user : " + err);
-				    res.json({status : "Fail", message : "Error"});
-				    //res.redirect('/register');
+				    res.json({status : "Fail", message : "Error on adding user to database..."});
 			    } else{
-				    //res.redirect('/login');
 				    res.json({status : "OK", message : "You have successfully registered"});
 			    }
 		    });
@@ -71,7 +69,7 @@ function processRegister(req, res, next){
 }
 
 function processLoginCheck(req, res, next){
-	var login = req.query.login;util.log("login to be checked : " + login);
+	var login = req.query.login;
 	UserService.containsLogin(login, function(hasLogin){
 		res.json({has : hasLogin});
 	});

@@ -25,3 +25,26 @@ exports.listRecordsFromTo = function(start, end, cb){
 		}
 	});
 };
+
+exports.listTodayRecords = function(cb){
+	dao.list(function(err, entries){
+		if (err){
+			cb(err, null);
+		} else {
+			var yesterday = new Date(),
+				res = [];
+			yesterday.setDate(yesterday.getDate() - 1);
+			yesterday.setHours(0);
+			yesterday.setMinutes(0);
+			yesterday.setSeconds(0);
+			res = entries.filter(function(entry){
+				return _isRecent(entry.date, yesterday);
+			});
+			cb(null, res);
+		}
+	});
+};
+
+function _isRecent(date, yestarday){
+	return date > yestarday;
+}
