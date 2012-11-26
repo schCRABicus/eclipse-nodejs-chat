@@ -66,8 +66,8 @@ i18next.init({
 	resGetPath: './src/locales/__ns__-__lng__.json',
 	detectLngQS: 'lang',
 	useLocalStorage: true,
-	localStorageExpirationTime: 86400000, // in ms, default 1 week
-	debug: true
+	localStorageExpirationTime: 365*24*60*60*1000, // (one year) in ms, default 1 week
+	debug: false//true
 });
 
 app.configure(function(){
@@ -80,7 +80,8 @@ app.configure(function(){
     //app.use(i18n.init);
 	app.use(i18next.handle);
 	app.use(app.router);
-	
+
+	app.use(express.favicon(__dirname + '/src/views/favicon.png'));
 	app.use(express.logger());
 	app.use(express.errorHandler({ dumpExceptions: true }));
 

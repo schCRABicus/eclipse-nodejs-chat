@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Main page</title>
+        <script type="text/javascript" src="js/frameworks/jquery/jquery-1.8.2.js"><!--keep--></script>
+        <script type="text/javascript" src="js/chatHelper.js"><!--keep--></script>
+        <script type="text/javascript" src="js/localeHelper.js"><!-- keep --></script>
+    </head>
+    <body onload="chatHelper.init();localeHelper.init('<%=i18n.lng()%>');">
+        <h1>Hello, <%= user %> !</h1>
+
+        <span id="locale" style="float:right;">
+            <select id="selectLocale">
+                <option value="en" >En</option>
+                <option value="ru" >Ru</option>
+            </select>
+        </span>
+
+        <div id="messagesContainer">
+            <% if (records){
+                for (var i = 0; i < records.length; i++) { %>
+            <div>
+                <span class="date"><%=records[i].date %></span>
+                <span class="author"><%=records[i].author %></span>
+                <span class="record"><%=records[i].record %></span>
+            </div>
+            <%  }
+               } %>
+        </div>
+        <form id="addRecordForm" onsubmit="return false;">
+            <p><b><%= t('Enter_your_comment')%>:</b></p>
+            <p><textarea rows="10" id="recordText" cols="45" name="record"></textarea></p>
+            <p><input type="submit" id="recordSubmit" value="<%= t('Send')%>"></p>
+        </form>
+
+    </body>
+</html>

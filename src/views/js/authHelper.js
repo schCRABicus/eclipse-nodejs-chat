@@ -29,8 +29,8 @@ var authHelper = (function(){
 	//private methods
 		_initTabs = function(){
 			var t;
-			$("#menuList li").each(function(i, el){
-				t = $(el).find("span").attr('class');
+			$("#navigationMenu li").each(function(i, el){
+				t = $(el).find("a").attr('class');
 				_tabs[t] = $("#" + t + "Tab");
 			});
 		},
@@ -43,8 +43,6 @@ var authHelper = (function(){
 			register : function(){
 				$('#loginTab').hide();
 				$('#registerTab').show();
-
-
 			}
 		},
 
@@ -171,6 +169,8 @@ var authHelper = (function(){
 							f = $('#' + state + '_' + k + 'ErrorHolder');
 							if (f.length){
 								f.text(err[k]);
+								f.offset($('#' + state + 'Form').find('[name="' + k + '"]').offset());
+								f.show();
 							} else {
 								_globalMessageHolder.append(err[k]);
 							}
@@ -184,7 +184,7 @@ var authHelper = (function(){
 
 		_clearErrors = function(){
 			$('.errorMessage').each(function(i, item){
-				$(item).empty();
+				$(item).empty().hide();
 			});
 			_globalMessageHolder.empty();
 		},
@@ -201,9 +201,10 @@ var authHelper = (function(){
 
 			_globalMessageHolder = $("#globalMessageHolder");
 
-			if (_selectTab.hasOwnProperty(selectedTab)){
+			/*if (_selectTab.hasOwnProperty(selectedTab)){
 				_selectTab[selectedTab]();
-			}
+			}*/
+			_clearErrors();
 		};
 
 	return {

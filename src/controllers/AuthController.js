@@ -9,6 +9,7 @@ exports.mapping = {
     },
     post : {
         '/login' : processLogin,
+	    '/logout' : processLogout,
 	    '/register' : processRegister
     }
 };
@@ -47,13 +48,18 @@ function processLogin(req, res, next){
     });
 }
 
+function processLogout(req, res, next){
+    req.session.user = null;
+	res.json({status : "OK"});
+}
+
 function processRegister(req, res, next){
 	var user = {
 		login : req.body.login,
 		password : req.body.password
 	};
-	UserService.containsUser(user, function(hasUser){
-	    if (!hasUser){
+	UserService.containsUser(user, function(r){
+	    if (!r.hasUser){
 		    UserService.addUser(user, function(err){
 			    if(err){
 				    util.log("error on adding user : " + err);

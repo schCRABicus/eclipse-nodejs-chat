@@ -1,0 +1,16 @@
+
+/************ Centering ************/
+#outer_container {
+    display: inline-block;
+    top: 0;
+}
+#middle_container {
+    display: inline-block;
+    top: 50%;
+    position: relative;
+}
+#inner_container {
+    display: inline-block;
+    top: -50%;
+    position: relative;
+}

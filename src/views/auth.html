@@ -10,10 +10,11 @@
     <script type="text/javascript" src="js/localeHelper.js"><!-- keep --></script>
 
     <link href="css/auth.css" rel="stylesheet" type="text/css" />
+    <link href="css/menu.css" rel="stylesheet" type="text/css" />
 </head>
 <body onload="authHelper.init('<%= selectedTab %>');localeHelper.init('<%=i18n.lng()%>');">
 
-    <div id="tabContainer">
+    <div class="panel_wrapper"><div id="tabContainer" >
 
         <span id="locale" style="float:right;">
             <select id="selectLocale">
@@ -22,55 +23,40 @@
             </select>
         </span>
 
-        <ul id="menuList">
-            <li><span class="login"><%= t('Login') %></span></li>
-            <li><span class="register"><%= t('Register') %></span></li>
-        </ul>
+        <div class="menu-container">
+            <ul id="navigationMenu">
+                <li><a class="login" href="#"><span><%= t('Login') %></a></span></li>
+                <li><a class="register" href="#"><span><%= t('Register') %></a></span></li>
+            </ul>
+        </div>
 
         <div class="wrapper">
             <span id="globalMessageHolder"></span>
 
             <div id="loginTab" class='panel_wrapper' style='display:none;'>
                 <form id="loginForm" onsubmit="return false;">
-                    <table>
-                        <tr>
-                            <td>
-                                <%= t('User') %> :
-                            </td>
-                            <td>
-                                <input type="text" name="login" value="" /><br />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
 
-                            </td>
-                            <td>
-                                <span id="login_loginErrorHolder" class="errorMessage"></span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <%= t('Password') %> :
-                            </td>
-                            <td>
-                                <input type="password" name="password" value=""/><br />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
+                    <div class="field">
+                        <p class="marginer">
+                            <label><%= t('User') %> :</label>
+                            <input type="text" name="login" value="" />
+                        </p>
+                        <p class="hint">Enter your name.</p>
+                        <p id="login_loginErrorHolder" class="errorMessage"></p>
+                    </div>
 
-                            </td>
-                            <td>
-                                <span id="login_passwordErrorHolder" class="errorMessage"></span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                                <input type="submit" id="submitLogin" value="Submit" />
-                            </td>
-                        </tr>
-                    </table>
+                    <div class="field">
+                        <p class="marginer">
+                            <label><%= t('Password') %> :</label>
+                            <input type="password" name="password" value=""/>
+                        </p>
+                        <p class="hint">Enter your password.</p>
+                        <p id="login_passwordErrorHolder" class="errorMessage"></p>
+                    </div>
+
+                    <div class="centered submitButtonHolder">
+                        <input type="submit" id="submitLogin" value="Submit" />
+                    </div>
                 </form>
             </div>
             <div id="registerTab" class='panel_wrapper' style='display:none;'>
@@ -78,7 +64,7 @@
                     <table>
                         <tr>
                             <td>
-                                <%= t('User') %> :
+                                <label><%= t('User') %> :</label>
                             </td>
                             <td>
                                 <input type="text" id="rlogin" name="login" value=""/><br />
@@ -94,7 +80,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <%= t('Password') %> :
+                                </label><%= t('Password') %> :<label>
                             </td>
                             <td>
                                 <input type="password" id="rpass" name="password" value=""/><br />
@@ -110,7 +96,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <%= t('CPassword') %> :
+                                <label><%= t('CPassword') %> :</label>
                             </td>
                             <td>
                                 <input type="password" id="rcpass" name="cpassword" value=""/><br />
@@ -136,6 +122,6 @@
         </div>
 
     </div>
-
+    </div>
 </body>
 </html>
