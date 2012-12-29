@@ -1,44 +1,109 @@
+/**
+ * Circled menu plugin;
+ * The navigation menu consists of circles, which are rotated on hover;
+ * On circle click, the specified page is opened;
+ * Fade effect is used to show/hide menu and pages;
+ *
+ *  @module circledMenu
+ */
 (function(){
 
 	CRABMCE.create('circleMenu', ['event', 'authentication'], function(){
 
 		var $ = jQuery,
-			event, auth,
-			_hide_show_menu_item_effect = "drop",
-			_hide_show_block_effect = "clip",
+
+            /**
+             * Event module to listen to and to notify listeners about events;
+             *
+             * @property event
+             */
+            event,
+
+            /**
+             * Authentication module to check user authentication;
+             *
+             * @property auth
+             */
+            auth,
+
+            /**
+             * Fade duration
+             *
+             * @property _fade_duration
+             * @private
+             * @type {Number}
+             */
+			_fade_duration = 500,
+
+            /**
+             * Currently selected page;
+             *
+             * @property _selected_tab
+             * @private
+             * @type {String}
+             */
 			_selected_tab = "",
+
+            /**
+             * List of menu items
+             *
+             * @property _menu_items
+             * @private
+             * @type {jQuery}
+             */
 			_menu_items = $([]),
+
+            /**
+             * Current navigation menu type (depends on user authentication
+             *
+             * @property _current_menu
+             * @private
+             * @type {String}
+             */
 			_current_menu = 'unlogged',
 
-			 _show_block = function(tab, cb){
-				$( ".block." + tab ).show( _hide_show_block_effect, {}, 500, cb );
+			_fade_in_block = function(tab, cb){
+				$( ".block." + tab ).fadeIn( _fade_duration, cb );
 			},
 
-			_hide_block = function(tab, cb){
-				$( ".block." + tab ).hide( _hide_show_block_effect, {}, 500, cb );
+			_fade_out_block = function(tab, cb){
+				$( ".block." + tab ).fadeOut( _fade_duration, cb );
 			},
 
-			_show_items = function(i, items){
-				$(items[i]).show( _hide_show_menu_item_effect , {}, 500, function(){
-					if (i < items.length - 1){
-						_show_items( ++i, items);
-					} else {
-						$(".menu-cont." + _current_menu).show();
+			_fade_in_items = function(items){
+				var l = items.length,
+					i = 0,
+					cb = function(){
+						if ( ++i == l ){
+							$(".menu-cont." + _current_menu).show();
+						}
 					}
-				});
+
+				$(items).fadeIn(_fade_duration, cb);
 			},
 
-			_hide_items = function(i, items){
-				$(items[i]).hide( _hide_show_menu_item_effect , {}, 500, function(){
-					if (i < items.length - 1){
-						_hide_items( ++i, items);
-					} else {
-						$(".menu-cont." + _current_menu).hide();
-						_show_block(_selected_tab, $.noop);
-					}
-				});
+			_fade_out_items = function(items){
+				var l = items.length,
+					i = 0,
+					cb = function(){
+						if ( ++i == l ){
+							$(".menu-cont." + _current_menu).hide();
+							_fade_in_block(_selected_tab, function(){
+								event.notifyListeners('showed_' + _selected_tab);
+							});
+						}
+					};
+
+				$(items).fadeOut(_fade_duration, cb);
 			},
 
+            /**
+             * Initializes rotate effect by binding the corresponding
+             * handler to all elements, having 'rot' class and followed by image element;
+             *
+             * @method _init_rotate_effect
+             * @private
+             */
 			_init_rotate_effect = function(){
 				$(".rot img").rotate({
 				   bind:
@@ -57,6 +122,8 @@
 			_init_close_processor = function(){
 				$(".close").click(function(){
 					hide_tab();
+                    event.notifyListeners("hidden_" + _selected_tab);
+                    event.notifyListeners("block_hidden");
 				});
 			},
 
@@ -70,15 +137,18 @@
 						tab = a.attr('class');
 
 					a.click(function(){
-						show_tab(tab);
+						if (a.parent().hasClass('logged') && !auth.isAuthenticated() ){
+                            //unlogged user tries to open closed tab;
+                            return;
+                        }
+                        show_tab(tab);
 					});
 					a.hide();
 				});
 
 				$(".menu-cont").hide();
 				$(".menu-cont." + _current_menu).show();
-				_show_items(0, _menu_items);
-
+				_fade_in_items(_menu_items);
 
 				_init_rotate_effect();
 				_init_close_processor();
@@ -93,19 +163,26 @@
 
 			show_tab = function(tab){
 				_selected_tab = tab;
-				_hide_items(0, _menu_items);
+				_fade_out_items(_menu_items);
 			},
 
 			hide_tab = function(){
-				_hide_block(_selected_tab, function(){
-					_selected_tab = "";
-					$(".menu-cont." + _current_menu).show();
-					_show_items(0, _menu_items);
+				_fade_out_block(_selected_tab, function(){
+					/*
+						prevents multiple method calls for the same menu :
+					    for example, for chat menu there are 2 blocks,
+					    so, after hiding of each block, the same function will be called twice
+					 */
+					if (_selected_tab != ""){
+						_selected_tab = "";
+						$(".menu-cont." + _current_menu).show();
+						_fade_in_items(_menu_items);
+					}
 				});
 			},
 
 			change_menu = function(){
-				_current_menu = auth.isAuthenticated ? 'logged' : 'unlogged';
+				_current_menu = auth.isAuthenticated() ? 'logged' : 'unlogged';
 				_menu_items = $(".menu-cont." + _current_menu + " a");
 			};
 

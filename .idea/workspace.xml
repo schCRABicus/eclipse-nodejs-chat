@@ -15,37 +15,80 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a6f62e2-0dfb-406a-bcce-f3bede7b3241" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/css/imgs/close.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/css/imgs/custom-noise.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/css/imgs/divider.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/css/imgs/hover-circle.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/css/imgs/login.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/css/imgs/noise.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/css/imgs/register.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/favicon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/css/main-page-ie.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/css/main-page.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/css/menu-circled.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/css/menu.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/index-old.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/js/frameworks/crab/menu-circled.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/js/frameworks/crab/modules/authentication.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/js/frameworks/crab/modules/chat.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/js/frameworks/crab/modules/circledMenu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/js/frameworks/crab/modules/event.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/js/frameworks/crab/modules/validator.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/js/frameworks/jquery/jQueryRotate.2.2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/css/imgs/ajax-loader.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/css/imgs/icon_en.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/css/imgs/icon_hover_circle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/css/imgs/icon_ru.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/css/imgs/slider.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/controllers/EmailController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/services/EmailService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/controllers/GlobalController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/controllers/LocaleController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/controllers/ServerStateController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/css/chat.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/js/frameworks/crab/modules/contact.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/css/global-message.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/js/frameworks/crab/modules/globalMessages.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/emailTemplates/simple/html.ejs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/js/frameworks/jquery/jQuery.mousewheel.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/css/jscrollPane.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/js/frameworks/jquery/jscrollPane.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/js/frameworks/crab/modules/locale.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/js/frameworks/crab/modules/sizes.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/emailTemplates/simple/style.css" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/views/auth.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/views/css/auth.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/views/css/main.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/views/css/menu.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/views/index-old.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/views/js/authHelper.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/views/js/chatHelper.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/views/js/frameworks/crab/menu-circled.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/views/js/localeHelper.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/views/js/validator.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/views/index.html" afterPath="$PROJECT_DIR$/src/views/main.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controllers/AuthController.js" afterPath="$PROJECT_DIR$/src/controllers/AuthController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/auth.html" afterPath="$PROJECT_DIR$/src/views/auth.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/css/auth.css" afterPath="$PROJECT_DIR$/src/views/css/auth.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/index.html" afterPath="$PROJECT_DIR$/src/views/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/js/authHelper.js" afterPath="$PROJECT_DIR$/src/views/js/authHelper.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/filters/AuthFilter.js" afterPath="$PROJECT_DIR$/src/filters/AuthFilter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controllers/ChatController.js" afterPath="$PROJECT_DIR$/src/controllers/ChatController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controllers/ErrorController.js" afterPath="$PROJECT_DIR$/src/controllers/ErrorController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dao/RecordDAO.js" afterPath="$PROJECT_DIR$/src/dao/RecordDAO.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/services/RecordService.js" afterPath="$PROJECT_DIR$/src/services/RecordService.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/js/frameworks/crab/modules/authentication.js" afterPath="$PROJECT_DIR$/src/views/js/frameworks/crab/modules/authentication.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/js/frameworks/crab/modules/chat.js" afterPath="$PROJECT_DIR$/src/views/js/frameworks/crab/modules/chat.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/js/frameworks/crab/modules/circledMenu.js" afterPath="$PROJECT_DIR$/src/views/js/frameworks/crab/modules/circledMenu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/js/frameworks/crab/crabmce.js" afterPath="$PROJECT_DIR$/src/views/js/frameworks/crab/crabmce.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/css/main-page.css" afterPath="$PROJECT_DIR$/src/views/css/main-page.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/css/menu-circled.css" afterPath="$PROJECT_DIR$/src/views/css/menu-circled.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/locales/translation-en.json" afterPath="$PROJECT_DIR$/src/locales/translation-en.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/locales/translation-ru.json" afterPath="$PROJECT_DIR$/src/locales/translation-ru.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/js/frameworks/crab/modules/validator.js" afterPath="$PROJECT_DIR$/src/views/js/frameworks/crab/modules/validator.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="eclipse-nodejs-chat.iws" />
     <ignored path=".idea/workspace.xml" />
+    <file path="/Dummy.txt" changelist="5a6f62e2-0dfb-406a-bcce-f3bede7b3241" time="1356755142365" ignored="false" />
+    <file path="/main-page.css" changelist="5a6f62e2-0dfb-406a-bcce-f3bede7b3241" time="1356325447370" ignored="false" />
+    <file path="/circledMenu.js" changelist="5a6f62e2-0dfb-406a-bcce-f3bede7b3241" time="1356418017981" ignored="false" />
+    <file path="/authentication.js" changelist="5a6f62e2-0dfb-406a-bcce-f3bede7b3241" time="1356327474027" ignored="false" />
+    <file path="/contact.js" changelist="5a6f62e2-0dfb-406a-bcce-f3bede7b3241" time="1356327619430" ignored="false" />
+    <file path="/index.html" changelist="5a6f62e2-0dfb-406a-bcce-f3bede7b3241" time="1356330934947" ignored="false" />
+    <file path="/globalMessages.js" changelist="5a6f62e2-0dfb-406a-bcce-f3bede7b3241" time="1356327269535" ignored="false" />
+    <file path="/locale.js" changelist="5a6f62e2-0dfb-406a-bcce-f3bede7b3241" time="1356671217194" ignored="false" />
+    <file path="/translation-en.json" changelist="5a6f62e2-0dfb-406a-bcce-f3bede7b3241" time="1356672243463" ignored="false" />
+    <file path="/GlobalController.js" changelist="5a6f62e2-0dfb-406a-bcce-f3bede7b3241" time="1356413655193" ignored="false" />
+    <file path="/app.js" changelist="5a6f62e2-0dfb-406a-bcce-f3bede7b3241" time="1356673907478" ignored="false" />
+    <file path="/route.js" changelist="5a6f62e2-0dfb-406a-bcce-f3bede7b3241" time="1356413256440" ignored="false" />
+    <file path="/chat.js" changelist="5a6f62e2-0dfb-406a-bcce-f3bede7b3241" time="1356416983307" ignored="false" />
+    <file path="/main.html" changelist="5a6f62e2-0dfb-406a-bcce-f3bede7b3241" time="1356674371106" ignored="false" />
+    <file path="/translation-ru.json" changelist="5a6f62e2-0dfb-406a-bcce-f3bede7b3241" time="1356414976863" ignored="false" />
+    <file path="/sizes.js" changelist="5a6f62e2-0dfb-406a-bcce-f3bede7b3241" time="1356416326051" ignored="false" />
+    <file path="/a.dummy" changelist="5a6f62e2-0dfb-406a-bcce-f3bede7b3241" time="1356588427085" ignored="false" />
+    <file path="/LocaleController.js" changelist="5a6f62e2-0dfb-406a-bcce-f3bede7b3241" time="1356606427153" ignored="false" />
+    <file path="/ServerStateController.js" changelist="5a6f62e2-0dfb-406a-bcce-f3bede7b3241" time="1356587708397" ignored="false" />
+    <file path="/menu-circled.css" changelist="5a6f62e2-0dfb-406a-bcce-f3bede7b3241" time="1356671545493" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,15 +96,19 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="Commander">
+    <leftPanel />
+    <rightPanel />
+    <splitter proportion="0.5" />
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
-    <option name="REVERSE_PATCH" value="false" />
   </component>
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <breakpoint_any>
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
         <option name="NOTIFY_UNCAUGHT" value="true" />
@@ -69,6 +116,7 @@
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
         <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
         <option name="COUNT_FILTER_ENABLED" value="false" />
         <option name="COUNT_FILTER" value="0" />
         <option name="CONDITION_ENABLED" value="false" />
@@ -84,6 +132,7 @@
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
         <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
         <option name="COUNT_FILTER_ENABLED" value="false" />
         <option name="COUNT_FILTER" value="0" />
         <option name="CONDITION_ENABLED" value="false" />
@@ -93,144 +142,20 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="eclipse-nodejs-chat" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/index.html">
+      <file leaf-file-name="main.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/views/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="283" column="74" selection-start="12302" selection-end="12302" vertical-scroll-proportion="-17.958334">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chatHelper.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/js/chatHelper.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="1" selection-start="18" selection-end="1453" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chat.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/js/frameworks/crab/modules/chat.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="19" selection-start="1620" selection-end="1620" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="validator.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/js/validator.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="52" selection-start="0" selection-end="1697" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="menu.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/css/menu.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="125" column="47" selection-start="3450" selection-end="3457" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="menu-circled.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/css/menu-circled.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="107" column="39" selection-start="2190" selection-end="2204" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="crabmce.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/js/frameworks/crab/crabmce.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="2" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="event.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/js/frameworks/crab/modules/event.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="32" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="authentication.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/views/js/frameworks/crab/modules/authentication.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="227" column="12" selection-start="5356" selection-end="5356" vertical-scroll-proportion="5.864286">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main-page.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/css/main-page.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="151" column="13" selection-start="3565" selection-end="3565" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuthController.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controllers/AuthController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="27" selection-start="1232" selection-end="1232" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserService.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/services/UserService.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="8" selection-start="555" selection-end="555" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="circledMenu.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/js/frameworks/crab/modules/circledMenu.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="107" column="46" selection-start="2396" selection-end="2396" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="16" selection-start="1772" selection-end="1772" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="validator.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/js/frameworks/crab/modules/validator.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="31" selection-start="1724" selection-end="1724" vertical-scroll-proportion="0.0">
+            <state line="430" column="0" selection-start="20638" selection-end="20638" vertical-scroll-proportion="-0.13914657">
               <folding />
             </state>
           </provider>
@@ -239,34 +164,115 @@
       <file leaf-file-name="notFound.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/notFound.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="39" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChatController.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controllers/ChatController.js">
+      <file leaf-file-name="crabmce.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/js/frameworks/crab/crabmce.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="38" selection-start="534" selection-end="534" vertical-scroll-proportion="0.0">
+            <state line="12" column="42" selection-start="224" selection-end="224" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDAO.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dao/UserDAO.js">
+      <file leaf-file-name="menu-circled.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/css/menu-circled.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="270" selection-end="399" vertical-scroll-proportion="0.0">
+            <state line="154" column="8" selection-start="2970" selection-end="2970" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RecordDAO.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dao/RecordDAO.js">
+      <file leaf-file-name="locale.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/js/frameworks/crab/modules/locale.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="26" selection-start="1779" selection-end="1779" vertical-scroll-proportion="0.0">
+            <state line="114" column="28" selection-start="4053" selection-end="4053" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="contact.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/js/frameworks/crab/modules/contact.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="71" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="62" column="16" selection-start="1787" selection-end="1787" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LocaleController.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controllers/LocaleController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="47" column="18" selection-start="1035" selection-end="1035" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="translation-en.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/locales/translation-en.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="69" selection-start="643" selection-end="643" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="translation-ru.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/locales/translation-ru.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="73" selection-start="673" selection-end="673" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GlobalController.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controllers/GlobalController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="45" selection-start="392" selection-end="392" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chat.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/js/frameworks/crab/modules/chat.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="145" column="53" selection-start="3293" selection-end="3293" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthFilter.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/filters/AuthFilter.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="81" selection-start="458" selection-end="458" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="validator.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/js/frameworks/crab/modules/validator.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="129" column="59" selection-start="3769" selection-end="3769" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -275,7 +281,7 @@
       <file leaf-file-name="RecordService.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/services/RecordService.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="24" selection-start="494" selection-end="510" vertical-scroll-proportion="0.0">
+            <state line="145" column="37" selection-start="3458" selection-end="3458" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -289,34 +295,47 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
-    <option name="CHECKOUT_INCLUDE_TAGS" value="false" />
-    <option name="UPDATE_CHANGES_POLICY" value="STASH" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/views/css/menu-circled.html" />
-        <option value="$PROJECT_DIR$/src/views/css/main-page-ie.css" />
-        <option value="$PROJECT_DIR$/src/views/menu-circled.html" />
-        <option value="$PROJECT_DIR$/src/views/js/authHelper.js" />
-        <option value="$PROJECT_DIR$/src/views/js/frameworks/crab/menu-circled.js" />
-        <option value="$PROJECT_DIR$/src/views/js/frameworks/crab/modules/validator.js" />
-        <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/src/views/js/frameworks/crab/crabmce.js" />
-        <option value="$PROJECT_DIR$/src/views/js/frameworks/crab/modules/chat.js" />
-        <option value="$PROJECT_DIR$/src/views/js/frameworks/crab/modules/event.js" />
-        <option value="$PROJECT_DIR$/src/views/css/menu-circled.css" />
+        <option value="$PROJECT_DIR$/src/filters/AuthFilter.js" />
         <option value="$PROJECT_DIR$/src/views/js/frameworks/crab/modules/circledMenu.js" />
-        <option value="$PROJECT_DIR$/src/controllers/AuthController.js" />
-        <option value="$PROJECT_DIR$/src/views/index.html" />
-        <option value="$PROJECT_DIR$/src/views/css/main-page.css" />
-        <option value="$PROJECT_DIR$/src/views/js/frameworks/crab/modules/authentication.js" />
+        <option value="$PROJECT_DIR$/src/views/js/frameworks/crab/modules/globalMessages.js" />
+        <option value="$PROJECT_DIR$/src/controllers/ServerStateController.js" />
+        <option value="$PROJECT_DIR$/src/controllers/LocaleController.js" />
+        <option value="$PROJECT_DIR$/src/views/css/menu-circled.css" />
+        <option value="$PROJECT_DIR$/src/locales/translation-en.json" />
+        <option value="$PROJECT_DIR$/src/locales/translation-ru.json" />
+        <option value="$PROJECT_DIR$/src/controllers/GlobalController.js" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/src/views/css/auth.css" />
+        <option value="$PROJECT_DIR$/src/views/js/frameworks/crab/modules/chat.js" />
+        <option value="$PROJECT_DIR$/src/views/main.html" />
+        <option value="$PROJECT_DIR$/src/views/js/frameworks/crab/modules/locale.js" />
+        <option value="$PROJECT_DIR$/src/views/js/frameworks/crab/crabmce.js" />
+        <option value="$PROJECT_DIR$/src/dao/RecordDAO.js" />
       </list>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState />
   </component>
   <component name="ModuleEditorState">
     <option name="LAST_EDITED_MODULE_NAME" />
     <option name="LAST_EDITED_TAB_NAME" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="65" />
+    <option name="y" value="24" />
+    <option name="width" value="1301" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -346,6 +365,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -401,32 +421,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eclipse-nodejs-chat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eclipse-nodejs-chat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="frameworks" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -446,10 +440,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -476,10 +466,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -530,6 +516,32 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="imgs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eclipse-nodejs-chat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eclipse-nodejs-chat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -546,6 +558,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eclipse-nodejs-chat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eclipse-nodejs-chat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="locales" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -581,179 +611,75 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="simple" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eclipse-nodejs-chat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eclipse-nodejs-chat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eclipse-nodejs-chat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eclipse-nodejs-chat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eclipse-nodejs-chat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eclipse-nodejs-chat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eclipse-nodejs-chat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eclipse-nodejs-chat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mongoose" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eclipse-nodejs-chat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eclipse-nodejs-chat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mongoose" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eclipse-nodejs-chat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eclipse-nodejs-chat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mongoose" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eclipse-nodejs-chat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eclipse-nodejs-chat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mongoose" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="support" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eclipse-nodejs-chat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eclipse-nodejs-chat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mongoose" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Favorites" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.JavaScript" />
-    <property name="MemberChooser.showClasses" value="true" />
+    <property name="options.lastSelected" value="appearance" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="DefaultHtmlFileTemplate" value="Html" />
-    <property name="GoToClass.includeLibraries" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/views/css/imgs" />
-      <recent name="$PROJECT_DIR$/src/views/js/frameworks/jquery" />
+      <recent name="$PROJECT_DIR$/src/views/locales/ru" />
+      <recent name="$PROJECT_DIR$/src/views/locales/en" />
       <recent name="$PROJECT_DIR$/src/views" />
+      <recent name="$PROJECT_DIR$/src/views/js/frameworks" />
     </key>
   </component>
   <component name="RunManager">
@@ -763,21 +689,20 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-        <option name="PhingTarget" enabled="false" />
-      </method>
+      <method />
     </configuration>
-    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" adl_options="" air_descriptor_path="" air_program_params="" air_publisher_id="" air_root_dir_path="" air_run_mode="AppDescriptor" browser_family="FIREFOX" class_name="" debugger_sdk="Module SDK" html_or_swf_file_path="" launcher_type="OSDefault" main_class_name="" method_name="" module_name="" output_log_level="" package_name="" player_path="/usr/bin/flashplayer" port="0" run_mode="HtmlOrSwfFile" run_trusted="false" scope="Class" socket_policy_port="0" url_to_launch="http://">
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-        <option name="PhingTarget" enabled="false" />
-      </method>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" output_log_level="null" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browserFamily" value="FIREFOX" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="playerPath" value="/usr/bin/flashplayerdebugger" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <module name="" />
@@ -790,16 +715,10 @@
       <option name="VM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-        <option name="PhingTarget" enabled="false" />
-      </method>
+      <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" />
+      <extension name="coverage" enabled="false" merge="false" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
@@ -811,16 +730,17 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-        <option name="PhingTarget" enabled="false" />
-      </method>
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" />
+      <extension name="coverage" enabled="false" merge="false" runner="idea" />
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -838,25 +758,7 @@
       </option>
       <envs />
       <patterns />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-        <option name="PhingTarget" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-        <option name="PhingTarget" enabled="false" />
-      </method>
+      <method />
     </configuration>
     <list size="0" />
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -893,30 +795,38 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Phing Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1888" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17252396" sideWeight="0.6709265" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.7907348" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.399361" sideWeight="0.7907348" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14285715" sideWeight="0.672" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Phing Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.328" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
@@ -937,12 +847,22 @@
     <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
     <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
     <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
-    <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
+    <option name="SHORT_DIFF_HORISONTALLY" value="true" />
+    <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
+    <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
+    <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
+    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+    <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
+    <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
+    <option name="LIMIT_HISTORY" value="true" />
+    <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
     <option name="LAST_COMMIT_MESSAGE" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -999,118 +919,190 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/views/css/menu.css">
+    <entry file="file://$PROJECT_DIR$/src/locales/translation-en.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="47" selection-start="3450" selection-end="3457" vertical-scroll-proportion="0.0">
+        <state line="17" column="69" selection-start="643" selection-end="643" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
+    <entry file="file://$PROJECT_DIR$/node_modules/i18next/lib/i18next.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="16" selection-start="1772" selection-end="1772" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="14" column="8" selection-start="350" selection-end="350" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/ChatController.js">
+    <entry file="file://$PROJECT_DIR$/src/views/css/jscrollPane.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="38" selection-start="534" selection-end="534" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.2552083" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/js/frameworks/crab/crabmce.js">
+    <entry file="file://$PROJECT_DIR$/src/views/css/chat.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="2" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/css/global-message.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/js/frameworks/crab/modules/chat.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="19" selection-start="1620" selection-end="1620" vertical-scroll-proportion="0.0">
+        <state line="145" column="53" selection-start="3293" selection-end="3293" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/js/frameworks/crab/modules/event.js">
+    <entry file="file://$PROJECT_DIR$/src/views/js/frameworks/crab/modules/locale.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="32" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/js/authHelper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="191" column="49" selection-start="4402" selection-end="4402" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/UserService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="8" selection-start="555" selection-end="555" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/js/localeHelper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="32" selection-start="585" selection-end="585" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/filters/AuthFilter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/AuthController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="27" selection-start="1232" selection-end="1232" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="283" column="74" selection-start="12302" selection-end="12302" vertical-scroll-proportion="-17.958334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/css/menu-circled.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="39" selection-start="2190" selection-end="2204" vertical-scroll-proportion="0.0">
+        <state line="114" column="28" selection-start="4053" selection-end="4053" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/css/main-page.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="151" column="13" selection-start="3565" selection-end="3565" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-3.9147425" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/js/frameworks/crab/modules/circledMenu.js">
+    <entry file="file://$PROJECT_DIR$/src/views/css/menu-circled.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="46" selection-start="2396" selection-end="2396" vertical-scroll-proportion="0.0">
+        <state line="154" column="8" selection-start="2970" selection-end="2970" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/js/frameworks/crab/modules/authentication.js">
+    <entry file="file://$PROJECT_DIR$/src/views/notFound.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="227" column="12" selection-start="5356" selection-end="5356" vertical-scroll-proportion="5.864286">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/UserDAO.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/RecordDAO.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="42" selection-start="250" selection-end="250" vertical-scroll-proportion="0.37906137" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/js/frameworks/crab/crabmce.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="42" selection-start="224" selection-end="224" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="16" selection-start="1787" selection-end="1787" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/RecordService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="145" column="37" selection-start="3458" selection-end="3458" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="430" column="0" selection-start="20638" selection-end="20638" vertical-scroll-proportion="-0.13914657">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Node.js</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>eclipse-nodejs-chat</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
 

@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset=utf-8>
+    <title class="i18n-html" data-i18n="Site_title" ><%= t('Site_title')%></title>
+
+    <script type="text/javascript" src="js/frameworks/jquery/jquery-1.8.2.min.js" charset=""><!--keep--></script>
+    <script type="text/javascript" src="js/frameworks/jquery/jquery-ui-1.8.24.custom.min.js" charset=""><!--keep--></script>
+    <script type="text/javascript" src="js/frameworks/jquery/jQueryRotate.2.2.js" charset=""><!--keep--></script>
+    <script type="text/javascript" src="js/frameworks/jquery/jQuery.mousewheel.js" charset=""><!--keep--></script>
+    <script type="text/javascript" src="js/frameworks/jquery/jscrollPane.min.js" charset=""><!--keep--></script>
+
+    <script type="text/javascript" src="js/frameworks/crab/crabmce.js" charset=""><!--keep--></script>
+
+    <!--  modules -->
+    <script type="text/javascript" src="js/frameworks/crab/modules/authentication.js" charset=""><!--keep--></script>
+    <script type="text/javascript" src="js/frameworks/crab/modules/chat.js" charset=""><!--keep--></script>
+    <script type="text/javascript" src="js/frameworks/crab/modules/circledMenu.js" charset=""><!--keep--></script>
+    <script type="text/javascript" src="js/frameworks/crab/modules/validator.js" charset=""><!--keep--></script>
+    <script type="text/javascript" src="js/frameworks/crab/modules/event.js" charset=""><!--keep--></script>
+    <script type="text/javascript" src="js/frameworks/crab/modules/contact.js" charset=""><!--keep--></script>
+    <script type="text/javascript" src="js/frameworks/crab/modules/globalMessages.js" charset=""><!--keep--></script>
+    <script type="text/javascript" src="js/frameworks/crab/modules/locale.js" charset=""><!--keep--></script>
+    <script type="text/javascript" src="js/frameworks/crab/modules/sizes.js" charset=""><!--keep--></script>
+
+    <link href="css/menu-circled.css" type="text/css" rel="stylesheet"/>
+    <link href="css/jscrollPane.css" type="text/css" rel="stylesheet"/>
+    <link href="css/main-page.css" type="text/css" rel="stylesheet"/>
+    <link href="css/chat.css" type="text/css" rel="stylesheet"/>
+    <link href="css/global-message.css" type="text/css" rel="stylesheet"/>
+
+    <!--[if lte IE 7]><link href="css/main-page-ie.css" type="text/css" rel="stylesheet"/><![endif]-->
+</head>
+<body>
+
+    <div id="info_global_message" class="info global_message">
+    </div>
+
+    <div id="error_global_message" class="error global_message">
+    </div>
+
+    <div id="warning_global_message" class="warning global_message">
+    </div>
+
+    <div id="success_global_message" class="success global_message">
+    </div>
+
+    <div id="outer_container">
+
+    <span id="locale">
+        <span class="rot locale" id="locale_en" data-value="en" >
+            <img src="css/imgs/icon_hover_circle.png" alt="" style="-webkit-transform: rotate(0deg); ">
+        </span>
+        <span class="rot locale" id="locale_ru" data-value="ru" >
+            <img src="css/imgs/icon_hover_circle.png" alt="" style="-webkit-transform: rotate(0deg); ">
+        </span>
+    </span>
+
+        <div id="middle_container">
+            <div id="inner_container">
+
+                <!-- Start of navigation for unknown user -->
+                <nav class="menu-cont unlogged">
+
+                    <a href="javascript:void(0);" class="about">
+                        <span class="text i18n-html" data-i18n="About" >
+                            <%= t('About')%>
+                        </span>
+                        <span class="rot">
+                            <img src="css/imgs/hover-circle.png" alt="" style="-webkit-transform: rotate(0deg); ">
+                        </span>
+                    </a>
+
+                    <a href="javascript:void(0);" class="login">
+                        <span class="text i18n-html" data-i18n="Login" >
+                            <%= t('Login')%>
+                        </span>
+                        <span class="rot">
+                            <img src="css/imgs/hover-circle.png" alt="" style="-webkit-transform: rotate(0deg); ">
+                      </span>
+                    </a>
+
+                    <a href="javascript:void(0);" class="register">
+                        <span class="text i18n-html" data-i18n="Register" >
+                            <%= t('Register')%>
+                        </span>
+                        <span class="rot">
+                            <img src="css/imgs/hover-circle.png" alt="" style="-webkit-transform: rotate(0deg); ">
+                      </span>
+                    </a>
+
+                    <a href="javascript:void(0);" class="contact">
+                        <span class="text i18n-html" data-i18n="Contact" >
+                           <%= t('Contact')%>
+                        </span>
+                        <span class="rot">
+                            <img src="css/imgs/hover-circle.png" alt="" style="-webkit-transform: rotate(0deg); ">
+                      </span>
+                    </a>
+
+                </nav>
+                <!-- End of navigation -->
+
+                <!-- Start of navigation for authenticated user -->
+                <nav class="menu-cont logged">
+
+                    <a href="javascript:void(0);" class="chat">
+                        <span class="text i18n-html" data-i18n="Chat" >
+                            <%= t('Chat')%>
+                        </span>
+                        <span class="rot">
+                            <img src="css/imgs/hover-circle.png" alt="" style="-webkit-transform: rotate(0deg); ">
+                        </span>
+                    </a>
+
+                    <a href="javascript:void(0);" class="about">
+                        <span class="text i18n-html" data-i18n="About" >
+                            <%= t('About')%>
+                        </span>
+                        <span class="rot">
+                            <img src="css/imgs/hover-circle.png" alt="" style="-webkit-transform: rotate(0deg); ">
+                        </span>
+                    </a>
+
+                    <a href="javascript:void(0);" class="contact">
+                        <span class="text i18n-html" data-i18n="Contact" >
+                           <%= t('Contact')%>
+                        </span>
+                        <span class="rot">
+                            <img src="css/imgs/hover-circle.png" alt="" style="-webkit-transform: rotate(0deg); ">
+                      </span>
+                    </a>
+
+                    <a href="javascript:void(0);" class="logout">
+                        <span class="text i18n-html" data-i18n="Logout" >
+                            <%= t('Logout')%>
+                        </span>
+                        <span class="rot">
+                            <img src="css/imgs/hover-circle.png" alt="" style="-webkit-transform: rotate(0deg); ">
+                      </span>
+                    </a>
+
+
+                </nav>
+                <!-- End of navigation -->
+
+                <!-- About page -->
+                <section class="block about">
+
+                    <a href="javascript:void(0);" class='close rot'>
+                        <img src='css/imgs/close.png' />
+                    </a>
+
+                    <div class="block_content">
+
+                        <h1 class="i18n-html" data-i18n="About"><%= t('About')%></h1>
+
+                        <p class="i18n-html" data-i18n="About_introduction">
+                            <%= t('About_introduction') %>
+                            <!--This is the first application, written on node.js.
+                            The only one purpose of this site is learning of basics of web development using Node.js.-->
+                        </p>
+
+                        <br />
+
+                        <p>
+                            <span class="i18n-html" data-i18n="About_modules_list">
+                                <%= t('About_modules_list') %>
+                            </span>
+                            <ul>
+                                <li><b>express</b> - Sinatra inspired web development framework</li>
+                                <li><b>ejs</b> - Embedded JavaScript templates</li>
+                                <li><b>mongoose</b> - a <a href="http://www.mongodb.org/">MongoDB</a> object modeling tool designed to work in an asynchronous environment.</li>
+                                <li><b>email-templates</b> - Node.js module for rendering beautiful emails with ejs templates and email-friendly inline CSS using juice.</li>
+                                <li><b>nodemailer</b> - Easy to use module to send e-mails, supports unicode and SSL/TLS</li>
+                                <li><b>i18next</b> - i18n made easy - full featured: middleware, template support plus clientside use</li>
+                            </ul>
+                        </p>
+                    </div>
+
+                </section>
+                <!-- End of about page -->
+
+                <!-- Login page -->
+                <section class="block login">
+
+                    <a href="javascript:void(0);" class='close rot'>
+                        <img src='css/imgs/close.png' />
+                    </a>
+
+                    <div id="login_ajax_loader" class="ajax-loader-block" style="display: none;">
+                        <img src="css/imgs/ajax-loader.gif" />
+                    </div>
+
+                    <div class="block_content">
+
+                        <h1 class="i18n-html" data-i18n="Login"><%= t('Login')%></h1>
+
+                        <form id="loginForm" onsubmit="return false;">
+
+                            <span id="globalMessageHolder"></span>
+
+                            <div class="field_container">
+
+                                <div class="field">
+                                    <p id="login_loginErrorHolder" class="errorMessage"></p>
+                                    <p class="marginer">
+                                        <label for="login">
+                                            <span class="i18n-html" data-i18n="User">
+                                                <%= t('User')%>
+                                            </span>
+                                            <span class="small-label i18n-html" data-i18n="Enter_your_name">
+                                                <%= t('Enter_your_name')%>
+                                            </span>
+                                        </label>
+                                        <input type="text" name="login" id="login" value="" />
+
+                                    </p>
+
+                                </div>
+
+                                <div class="field">
+                                    <p id="login_passwordErrorHolder" class="errorMessage"></p>
+                                    <p class="marginer">
+                                        <label for="password">
+                                            <span class="i18n-html" data-i18n="Password">
+                                                <%= t('Password')%>
+                                            </span>
+                                            <span class="small-label i18n-html" data-i18n="Enter_your_password">
+                                                <%= t('Enter_your_password')%>
+                                            </span>
+                                        </label>
+                                        <input type="password" name="password" id="password" value=""/>
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="centered submitButtonHolder">
+                                <input type="submit" id="submitLogin" class="i18n-value" data-i18n="Send" value="<%= t('Send')%>" />
+                            </div>
+                        </form>
+
+                    </div>
+
+                </section>
+                <!-- End of login page -->
+
+                <!-- Register page -->
+                <section class="block register">
+
+                    <a href="javascript:void(0);" class='close rot'>
+                        <img src='css/imgs/close.png' />
+                    </a>
+
+                    <div id="register_ajax_loader" class="ajax-loader-block" style="display: none;">
+                        <img src="css/imgs/ajax-loader.gif" />
+                    </div>
+
+                    <div class="block_content">
+
+                        <h1 class="i18n-html" data-i18n="Register"><%= t('Register')%></h1>
+
+                        <form id="registerForm" onsubmit="return false;">
+
+                            <div class="field_container">
+                                <div class="field">
+                                    <p class="marginer">
+                                        <label for="rlogin">
+                                            <span class="i18n-html" data-i18n="User">
+                                                <%= t('User')%>
+                                            </span>
+                                            <span class="small-label i18n-html" data-i18n="Enter_your_name">
+                                                <%= t('Enter_your_name')%>
+                                            </span>
+                                        </label>
+                                        <input type="text" id="rlogin" name="login" value="" />
+                                    </p>
+                                    <p id="register_loginErrorHolder" class="errorMessage" ></p>
+                                </div>
+
+                                <div class="field">
+                                    <p class="marginer">
+                                        <label for="rpass">
+                                            <span class="i18n-html" data-i18n="Password">
+                                                <%= t('Password')%>
+                                            </span>
+                                            <span class="small-label i18n-html" data-i18n="Enter_your_password">
+                                                <%= t('Enter_your_password')%>
+                                            </span>
+                                        </label>
+                                        <input type="password" id="rpass" name="password" value=""/>
+                                    </p>
+                                    <p id="register_passwordErrorHolder" class="errorMessage"></p>
+                                </div>
+
+                                <div class="field">
+                                    <p class="marginer">
+                                        <label for="rcpass">
+                                            <span class="i18n-html" data-i18n="CPassword">
+                                                <%= t('CPassword')%>
+                                            </span>
+                                            <span class="small-label i18n-html" data-i18n="Confirm_your_password">
+                                                <%= t('Confirm_your_password')%>
+                                            </span>
+                                        </label>
+                                        <input type="password" id="rcpass" name="cpassword" value=""/>
+                                    </p>
+                                    <p id="register_cpasswordErrorHolder" class="errorMessage"></p>
+                                </div>
+                            </div>
+
+                            <div class="centered submitButtonHolder">
+                                <input type="submit" id="submitRegister" class="i18n-value" data-i18n="Send" value="<%= t('Send')%>" />
+                            </div>
+
+                        </form>
+                    </div>
+
+                </section>
+                <!-- End of register page -->
+
+                <!-- Chat page -->
+                <section class="block chat">
+
+                    <a href="javascript:void(0);" class='close rot'>
+                        <img src='css/imgs/close.png' />
+                    </a>
+
+                    <div id="chat_ajax_loader" class="ajax-loader-block" style="display: none;">
+                        <img src="css/imgs/ajax-loader.gif" />
+                    </div>
+
+                    <div class="block_content">
+
+                        <h1 class="i18n-html" data-i18n="Chat"><%= t('Chat')%></h1>
+
+                        <div class="chat-tabs">
+                            <span class="chat-tabs-label i18n-html" data-i18n="Show_messages">Show messages : </span>
+                            <span class="chat-tab active i18n-html" data-i18n="Yesterday" data-value="yesterday">Yesterday</span>
+                            <span class="chat-tab i18n-html" data-i18n="7_days" data-value="7days">7 days</span>
+                            <span class="chat-tab i18n-html" data-i18n="30_days" data-value="30days">30 days</span>
+                            <span class="chat-tab i18n-html" data-i18n="3_months" data-value="3month">3 months</span>
+                            <span class="chat-tab i18n-html" data-i18n="6_months" data-value="6month">6 months</span>
+                            <span class="chat-tab i18n-html" data-i18n="1_year" data-value="1year">1 year</span>
+                            <span class="chat-tab i18n-html" data-i18n="All" data-value="all">All</span>
+                        </div>
+                        <div class="scroll-pane"  style="height: 200px;">
+                            <div id="messagesContainer">
+
+                            </div>
+                        </div>
+
+                        <div class="navigation_toolbar">
+
+                            <span id="page_switcher">
+
+                            </span>
+
+                            <span class="view_per_page">
+                                <select id="view_per_page_selector">
+                                    <option value="5">5</option>
+                                    <option value="10" selected>10</option>
+                                    <option value="20">20</option>
+                                    <option value="50">50</option>
+                                    <option value="all">all</option>
+                                </select>
+                            </span>
+
+                            <span class="view_number">
+                                <span class="i18n-html" data-i18n="View">
+                                    <%= t('View')%>
+                                </span>
+                                <span id="start_view_number"></span>
+                                -
+                                <span id="end_view_number"></span>
+                                <span class="i18n-html" data-i18n="of">
+                                    <%= t('of')%>
+                                </span>
+                                <span id="total_view_number"></span>
+                            </span>
+                        </div>
+
+                    </div>
+
+                </section>
+                <!-- End of Logout page -->
+
+                <!-- Logout page -->
+                <section class="block logout">
+
+                    <a href="javascript:void(0);" class='close rot'>
+                        <img src='css/imgs/close.png' />
+                    </a>
+
+                    <div class="block_content">
+
+                        <h1 class="i18n-html" data-i18n="Logout"><%= t('Logout')%></h1>
+
+                        <p>
+                            <span class="i18n-html" data-i18n="Logout_introduction">
+                                <%= t('Logout_introduction')%>
+                            </span>
+                        </p>
+
+                        <p>
+                            <span class="i18n-html" data-i18n="Logout_content">
+                                <%= t('Logout_content')%>
+                            </span>
+                        </p>
+
+                        <br />
+                        <br />
+
+                        <div class="centered submitButtonHolder">
+                            <input type="submit" id="logout" class="i18n-value" data-i18n="Logout" value="<%= t('Logout')%>" />
+                        </div>
+
+                    </div>
+
+                </section>
+                <!-- End of Logout page -->
+
+                <!-- Typing panel for chat -->
+                <section class="block chat chat_typing_zone">
+
+                    <div class="block_content">
+
+                        <form id="addRecordForm" onsubmit="return false;">
+                            <p>
+                                <textarea id="recordText"
+                                  class="req-string"
+                                  cols="10"
+                                  rows="6"
+                                  name="record"
+                                  placeholder="Your Message"></textarea>
+                            </p>
+
+                            <div class="centered submitButtonHolder">
+                                <input type="submit" id="recordSubmit" class="i18n-value" data-i18n="Send" value="<%= t('Send')%>">
+                            </div>
+                        </form>
+                    </div>
+
+                </section>
+                <!-- Typing panel for chat -->
+
+                <!-- Contact page -->
+                <section class="block contact">
+
+                    <a href="javascript:void(0);" class='close rot'>
+                        <img src='css/imgs/close.png' />
+                    </a>
+
+                    <div id="contact_ajax_loader" class="ajax-loader-block" style="display: none;">
+                        <img src="css/imgs/ajax-loader.gif" />
+                    </div>
+
+                    <div class="block_content">
+
+                        <h1 class="i18n-html" data-i18n="Contact"><%= t('Contact')%></h1>
+
+                        <div class="block-left">
+
+                            <div class="style-form">
+                                <form id="contactForm" name="form" method="post" action="">
+                                    <div class="field">
+                                        <p class="marginer">
+                                            <label for="name">
+                                                <span class="i18n-html" data-i18n="Name">
+                                                    <%= t('Name')%>
+                                                </span>
+                                                <span class="small-label i18n-html" data-i18n="Add_your_name">
+                                                    <%= t('Add_your_name')%>
+                                                </span>
+                                            </label>
+                                            <input name="name" id="name" type="text">
+                                        </p>
+                                        <p id="contact_nameErrorHolder" class="errorMessage"></p>
+                                    </div>
+                                    <div class="field">
+                                        <p class="marginer">
+                                            <label for="email">
+                                                <span class="i18n-html" data-i18n="Email">
+                                                    <%= t('Email')%>
+                                                </span>
+                                                <span class="small-label i18n-html" data-i18n="Add_your_e-mail">
+                                                    <%= t('Add_your_e-mail')%>
+                                                </span>
+                                            </label>
+                                            <input name="email" id="email" type="text">
+                                        </p>
+                                        <p id="contact_emailErrorHolder" class="errorMessage"></p>
+                                    </div>
+                                    <div class="field">
+                                        <p class="marginer">
+                                            <label for="message">
+                                                <span class="i18n-html" data-i18n="Message">
+                                                    <%= t('Message')%>
+                                                </span>
+                                                <span class="small-label i18n-html" data-i18n="Add_your_message">
+                                                    <%= t('Add_your_message')%>
+                                                </span>
+                                            </label>
+                                            <textarea id="message" name="message" rows="3" cols="10"></textarea>
+                                        </p>
+                                        <p id="contact_messageErrorHolder" class="errorMessage"></p>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="block-right">
+                            <ul class="contact">
+                                <li>
+                                    <span class="i18n-html" data-i18n="Lushchitskiy_Nickolay">
+                                        <%= t('Lushchitskiy_Nickolay')%>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="i18n-html" data-i18n="Junior_Developer">
+                                        <%= t('Junior_Developer')%>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="i18n-html" data-i18n="Minsk_Belarus">
+                                        <%= t('Minsk_Belarus')%>
+                                    </span>
+                                </li>
+                                <li>
+                                    Skype : &nbsp;
+                                  <span>
+                                    schCRABicus</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="centered submitButtonHolder">
+                            <input type="submit" id="contactMe" class="i18n-value" data-i18n="Send" value="<%= t('Send')%>" />
+                        </div>
+
+                    </div>
+                </section>
+            <!-- End of Contact page -->
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

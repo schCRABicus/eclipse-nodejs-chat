@@ -1,11 +1,12 @@
 (function(){
 
-	CRABMCE.create('authentication', ['validator', 'event'], function(){
+	CRABMCE.create('authentication', ['validator', 'event', 'globalMessages'], function(){
 
 		//private fields
 		var validator,
 			menu,
 			event,
+			globalMessage,
 			_paths = {
 				index : '/index',
 				login : '/login',
@@ -13,7 +14,6 @@
 				register : '/register',
 				checkLogin : '/register/check/login'
 			},
-			_tabs = {},
 			_states = {
 				ready : 0,
 				waiting : 1,
@@ -31,34 +31,56 @@
 					'pwds' : 'passwordsMatch'
 				}
 			},
-			_globalMessageHolder,
+
+			/**
+			 * jQuery DOM element, storing ajax-loader for login block;
+			 *
+			 * @private
+			 * @property _ajaxLoaderLogin
+			 * @type jQuery
+			 */
+			_ajaxLoaderLogin,
+
+			/**
+			 * jQuery DOM element, storing ajax-loader for register block;
+			 *
+			 * @private
+			 * @property _ajaxLoaderRegister
+			 * @type jQuery
+			 */
+			_ajaxLoaderRegister,
+
 			_authenticatedUser = null,
 
-			//private methods
-			_initTabs = function(){
-				var t;
-				$("#navigationMenu li").each(function(i, el){
-					t = $(el).find("a").attr('class');
-					_tabs[t] = $("#" + t + "Tab");
+		//private methods
+
+			/**
+			 * Resets form;
+			 *
+			 * @param form Form to be reset;
+			 */
+			_resetForm = function(form){
+				form.each(function(){
+					this.reset();
 				});
 			},
 
-			_selectTab = {
-				login : function(){
-					$('#registerTab').hide();
-					$('#loginTab').show();
-				},
-				register : function(){
-					$('#loginTab').hide();
-					$('#registerTab').show();
-				}
-			},
-
+			/**
+			 * Logs current user out and notifies listeners about t;
+			 *
+			 */
 			_logout = function(){
 				_authenticatedUser = null;
 				event.notifyListeners('authentication');
 			},
 
+			/**
+			 * @function _initLoginForm
+			 * Private initializer;
+			 * Initializes login form :
+			 *  - binds listener to submit event;
+			 *
+			 */
 			_initLoginForm = function(){
 				$('#loginForm').submit(function(){
 					var self = $(this),
@@ -72,24 +94,28 @@
 						});
 
 						if ( !_validate( data, 'login' ) ) {
+							_ajaxLoaderLogin.show();
 							$.ajax({
 								url : _paths.login,
 								type : 'POST',
 								dataType : 'json',
 								data : data,
-								success : function(data){
-									if (data && data.status && data.status.toLowerCase() == "ok"){
-										//_redirect(_paths.index);
+								success : function(rdata){
+									if (rdata && rdata.status && rdata.status.toLowerCase() == "ok"){
+										_resetForm(self);
 										_authenticatedUser = data.login;
 										event.notifyListeners('authentication');
 										menu.hideTab('login');
 									} else {
-										data = data || {};
-										_globalMessageHolder.append(data.message || "Something failed");
+										rdata = rdata || {};
+										globalMessage.showMessage('error', "Login failed", rdata.message || "Something failed");
 									}
+									_ajaxLoaderLogin.hide();
 								},
 								error : function(e){
 									console.log('error on login : ', e);
+									globalMessage.showMessage('warning', "Error on login", e.responseText || "");
+									_ajaxLoaderLogin.hide();
 								}
 							});
 						}
@@ -100,6 +126,7 @@
 
 
 			/**
+			 * @function _initRegisterForm
 			 * Private initializer;
 			 * Initializes register form :
 			 *  - binds listener to submit event;
@@ -121,6 +148,7 @@
 						data.pwds = [data.password, data.cpassword];
 
 						if ( !_validate(data, 'register' )) {
+							_ajaxLoaderRegister.show();
 							$.ajax({
 								url : _paths.register,
 								type : 'POST',
@@ -128,15 +156,18 @@
 								data : data,
 								success : function(data){
 									if (data && data.status && data.status.toLowerCase() == "ok"){
-										//_redirect(_paths.login);
+										_resetForm(self);
 										menu.hideTab('register');
 									} else {
 										data = data || {};
-										_globalMessageHolder.append(data.message || "Something failed");
+										globalMessage.showMessage('error', "Registration failed", data.message || "Something failed");
 									}
+									_ajaxLoaderRegister.hide();
 								},
 								error : function(e){
 									console.log('error on registration : ', e);
+									globalMessage.showMessage('error', "Error on registration ", e.responseText || "");
+									_ajaxLoaderRegister.hide();
 								}
 							});
 						}
@@ -166,6 +197,7 @@
 							},
 							error : function(err){
 								console.log("error occured : " + err);
+								globalMessage.showMessage('error', "Error occured while checking login existance", err.responseText || "");
 								_state = _states.error;
 							}
 						});
@@ -176,8 +208,23 @@
 
 			_initLogoutHandler = function(){
 				$('#logout').click(function(){
-					_logout();
-					menu.hideTab('logout');
+					$.ajax({
+						url : _paths.logout,
+						type : 'POST',
+						dataType : 'json',
+						success : function(data){
+							if (data && data.status && data.status.toLowerCase() == "ok"){
+								_logout();
+								menu.hideTab('logout');
+							} else {
+								globalMessage.showMessage('error', "Logout failed", data.message || "Something failed");
+							}
+						},
+						error : function(e){      console.log(e);
+							globalMessage.showMessage('warning', 'Error on logout', e.responseText || "");
+						}
+					});
+
 				})
 			},
 
@@ -204,7 +251,7 @@
 
 									f.show();
 								} else {
-									_globalMessageHolder.append(err[k]);
+									globalMessage.showMessage('error', "Validation error", err[k]);
 								}
 							}
 						}
@@ -218,28 +265,34 @@
 				$('.errorMessage').each(function(i, item){
 					$(item).empty().hide();
 				});
-				_globalMessageHolder.empty();
-			},
-
-			_redirect = function(destination){
-				window.location.href = destination;
+				globalMessage.clear();
 			},
 
 			isAuthenticated = function(){
-				return _authenticatedUser != null;
+				return (_authenticatedUser != null);
 			},
 
 			init = function(){
 				validator = CRABMCE.modules.validator;
 				menu = CRABMCE.modules.circleMenu;
 				event = CRABMCE.modules.event;
+				globalMessage = CRABMCE.modules.globalMessages;
 
-				_initTabs();
 				_initLoginForm();
 				_initRegisterForm();
 				_initLogoutHandler();
 
-				_globalMessageHolder = $("#globalMessageHolder");
+				_ajaxLoaderLogin = $("#login_ajax_loader");
+				_ajaxLoaderRegister = $("#register_ajax_loader");
+
+                event.addListener("hidden_login", function(){
+                    _resetForm($('#loginForm'));
+                    _clearErrors();
+                });
+                event.addListener("hidden_register", function(){
+                    _resetForm($('#registerForm'));
+                    _clearErrors();
+                });
 
 				_clearErrors();
 			};

@@ -1,17 +1,30 @@
+/**
+ * Data access object to 'Record' schema;
+ *
+ * @module RecordDao
+ */
 var mongoose = require('mongoose'),
 	Schema = mongoose.Schema,
-	UserDAO = require('./UserDAO.js'),
 	Record;
 
 /*
 Basic database schema for single record;
  */
 var RecordSchema = new Schema({
-	date : Date,
-	authorId : String,
+	date : {
+		type: Date,
+		'default' : Date.now
+	},
+	authorId : {
+		type: Schema.Types.ObjectId,
+		ref: 'User'
+	},
 	record : String
 });
 
+/**
+ * Set up model;
+ */
 mongoose.model('Record', RecordSchema);
 Record = mongoose.model('Record');
 
@@ -40,15 +53,16 @@ exports.create = function(o, cb){
  * @param cb {Function} Callback to be executed on entry being extracted;
  */
 var read = exports.read = function(id, cb){
-	Record.findOne({_id : id}, function(err, entry){
-		if (err){
-			cb(err, null);
-		} else {
-			_addAuthorDependency(entry, function(){
-				cb(null, entry)
-			});
-		}
-	});
+	Record
+		.findById(id)
+		.populate('authorId', 'login')  // only return the User's login
+		.exec(function(err, entry){
+			if (err){
+				cb(err, null);
+			} else {
+				cb(null, entry);
+			}
+		});
 };
 
 /**
@@ -78,6 +92,7 @@ exports.update = function(o, cb){
 /**
 * Deletes the specified object
 *
+* @method del
 * @param o {Object} Object to be deleted;
 * @param cb {Function} Callback to be executed;
 */
@@ -99,44 +114,89 @@ exports.del = function(o, cb){
 /**
 * Lists all available objects
 *
+* @method list
 * @param cb {Function} Callback to be executed;
 */
 exports.list = function(cb){
-	Record.find({}, function(err, entries){
-		if (err){
-			cb(err, null);
-		} else{
-			var l = entries.length,
-				s = 0,
-				_cbCaller;
-			entries.forEach(function(entry){
-				_addAuthorDependency(entry, function(){
-					s++;
-				});
-			});
-			_cbCaller = function(){
-				if (s == l){
-					cb(null, entries);
-				} else{
-					setTimeout(_cbCaller, 1);
-				}
-			};
-			_cbCaller();
-		}
-	});
+	Record
+		.find({})
+		.populate('authorId', 'login')
+		.exec(function(err, entries){
+			if (err){
+				cb(err, null);
+			} else{
+				cb(null, entries);
+			}
+		});
 };
 
 /**
- * Loads author name by its id;
+ * Lists records of the selected range (by number);
  *
- * @param entry
- * @param cb
+ * @method listRange
+ * @param {Number} from        Start range position;
+ * @param {Number} to          End range position;
+ * @param {Function} cb        Callback to execute;
  */
-var _addAuthorDependency = function(entry, cb){
-	UserDAO.read(entry.authorId, function(err, u){
-		if (!err && u){
-			entry.author = u.login;
+exports.listRange = function(from, to, cb){
+	Record
+		.find({'number' : {$gte: from, $lte: to}})
+		.populate('authorId', 'login')
+		.exec(function(err, entries){
+			if (err){
+				cb(err, null);
+			} else{
+				cb(null, entries);
+			}
+		});
+};
+
+/**
+ * Lists all records for the selected period
+ *
+ * @method listRecordsForPeriod
+ * @param from  Date to start search from
+ * @param cb    Callback to execute;
+ */
+exports.listRecordsForPeriod = function(from, cb){
+	Record
+		.where('date').gte(from)
+		.populate('authorId', 'login')
+		.exec(function(err, entries){
+			if (err){
+				cb(err, null);
+			} else{
+				cb(null, entries);
+			}
+		});
+};
+
+exports.listRangeOfRecordsForPeriod = function(from, to, fromRange, cb){
+	Record
+		.where('date').gte(fromRange)
+		.where('number').gte(from).lte(to)
+		.populate('authorId', 'login')
+		.exec(function(err, entries){
+			if (err){
+				cb(err, null);
+			} else{
+				cb(null, entries);
+			}
+		});
+};
+
+/**
+ * Counts number of entries in the database;
+ *
+ * @param conditions {Object} Contitions the target entries have to satisfy
+ * @param cb        {Function} Callback to be executed;
+ */
+exports.count = function(conditions, cb){
+	Record.count(conditions, function(err, n){
+		if (err){
+			cb(err, 0);
+		} else{
+			cb(null, n);
 		}
-		cb();
 	});
-}
+};

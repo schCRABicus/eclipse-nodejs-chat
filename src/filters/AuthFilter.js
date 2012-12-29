@@ -1,6 +1,17 @@
+/**
+ * Filters requests to protected paths and checks authentication;
+ * If the user is not authenticated, denies access to the page;
+ *
+ * @module AuthFilter
+ */
+
+/**
+ * Mappings handled by the filter;
+ *
+ * @type {Object}
+ */
 var mapping = exports.mapping = {
 	get : {
-		'/index' : checkAuthentication,
 		'/chat/wait' : checkAuthentication
 	},
 	post : {
@@ -8,6 +19,13 @@ var mapping = exports.mapping = {
     }
 };
 
+/**
+ * Checks whether the user is authenticated and if no, redirects to the main page;
+ *
+ * @param req Request object;
+ * @param res Response object;
+ * @param next  The next function in a chain to be executed for the given request;
+ */
 function checkAuthentication(req, res, next){
 	var session = req.session,
 		user = null;
@@ -18,6 +36,6 @@ function checkAuthentication(req, res, next){
 	if (user){
 		next();
 	} else{
-		res.redirect('/login');
+		res.redirect('/');
 	}
 }

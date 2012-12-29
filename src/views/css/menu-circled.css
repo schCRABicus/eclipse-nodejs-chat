@@ -57,6 +57,10 @@
     vertical-align: middle;*/
 }
 
+a:focus{
+    outline: none;
+}
+
 /********* Menu items for unlogged menu ***********/
 .menu-cont.unlogged a.about{
     left:0;
@@ -87,7 +91,7 @@
 .menu-cont.logged a.chat{
     left:0;
     z-index:4;
-    background: /*#ff8c00*//*#1e8bb4*/cadetblue center no-repeat;
+    background: /*#ff8c00*//*#1e8bb4*//*cadetblue*/#5F9EA0 center no-repeat;
 }
 
 .menu-cont.logged a.about{
@@ -127,3 +131,28 @@ body {
     background-image: url("imgs/custom-noise.png");
     background-repeat: repeat;
 }
+
+/** Language switcher styles **/
+#locale {
+    display: block;
+    position: absolute;
+    z-index: 1;
+}
+#locale .rot {
+    display: inline-block;
+    cursor: pointer;
+    width: 64px;
+    height: 64px;
+    text-align: center;
+}
+#locale .rot img {
+    margin-top: 5px;
+}
+#locale_en{
+    background: url('imgs/icon_en.png') no-repeat;
+}
+
+#locale_ru{
+    background: url('imgs/icon_ru.png') no-repeat;
+}
+

@@ -1,0 +1,46 @@
+.global_message {
+    background-size: 40px 40px;
+
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, .05) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 75%, transparent 75%, transparent);
+    background-image: -webkit-linear-gradient(135deg, rgba(255, 255, 255, .05) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 75%, transparent 75%, transparent);
+    background-image: -o-linear-gradient(135deg, rgba(255, 255, 255, .05) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 75%, transparent 75%, transparent);
+    background-image: -moz-linear-gradient(135deg, rgba(255, 255, 255, .05) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 75%, transparent 75%, transparent);
+    background-image: -ms-linear-gradient(135deg, rgba(255, 255, 255, .05) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 75%, transparent 75%, transparent);
+    box-shadow: inset 0 -1px 0 rgba(255, 255, 255, .4);
+    width: 100%;
+    border: 1px solid;
+    color: #fff;
+    padding: 15px;
+    position: fixed;
+    _position: absolute;  /* IE6 only */
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .5);
+    z-index: 200;
+}
+
+.info.global_message {
+    background-color: #4ea5cd;
+    border-color: #3b8eb5;
+}
+
+.error.global_message {
+    background-color: #de4343;
+    border-color: #c43d3d;
+}
+
+.warning.global_message{
+	background-color: #eaaf51;
+	border-color: #d99a36;
+}
+
+.success.global_message{
+	background-color: #61b832;
+	border-color: #55a12c;
+}
+
+.global_message h3{
+	margin: 0 0 5px 0;
+}
+
+.global_message p{
+	margin: 0;
+}

@@ -2,7 +2,6 @@
 var http = require('http'),
 	util = require('util'),
 	express = require('express'),
-	//i18n = require('i18n'),
 	i18next = require('i18next'),
 	utils = require('./src/utils/utils.js'),
 	app = express(),
@@ -14,7 +13,11 @@ var http = require('http'),
 	//controllers
 	controllers = [
 		require('./src/controllers/ChatController.js'), // ChatController
-		require('./src/controllers/AuthController.js')  // AuthController
+		require('./src/controllers/AuthController.js'), // AuthController
+		require('./src/controllers/ServerStateController.js'), //ServerStateController.js
+		require('./src/controllers/EmailController.js'), //EmailController.js,
+        require('./src/controllers/GlobalController.js'),//GlobalController.js
+        require('./src/controllers/LocaleController.js') //LocaleController.js
 	],
 	ErrorController = require('./src/controllers/ErrorController.js'),
 
@@ -49,25 +52,15 @@ app.use(express.session({
 //setting path to resolve static references from web pages;
 app.use(express.static('src/views'));
 
-/*//configuring i18n module
-i18n.configure({
-    // setup some locales - other locales default to en silently
-    locales:['en', 'ru'],
-
-	//directory to look for i18n files in
-	directory : './src/locales',
-
-    // where to register __() and __n() to, might be "global" if you know what you are doing
-    register: global
-});*/
-
+//configuring i18n module
 i18next.init({
 	//directory to look for i18n files in
 	resGetPath: './src/locales/__ns__-__lng__.json',
 	detectLngQS: 'lang',
 	useLocalStorage: true,
+    returnObjectTrees: true,
 	localStorageExpirationTime: 365*24*60*60*1000, // (one year) in ms, default 1 week
-	debug: false//true
+	debug: false
 });
 
 app.configure(function(){
@@ -115,6 +108,44 @@ ErrorController.handlers.forEach(function(errorHandler){
 ConnectManager.connect();
 app.on('close', function(err){
     ConnectManager.disconnect(function(err){});
+});
+
+//locale change handler;
+app.on('localeChanged', function(req, res, locale){
+    var t, i18nDummy;
+
+    // set locale & i18n in req
+    req.locale = req.lng = req.language = locale;
+
+    // assert t function returns always translation
+    // in given lng inside this request
+    t = function(key, options) {
+        options = options || {};
+        options.lng = options.lng || req.lng || i18next.lng();
+        return i18next.t(key, options);
+    };
+
+    i18nDummy = {
+        t: t,
+        translate: t,
+        lng: function() { return locale; },
+        locale: function() { return locale; },
+        language: function() { return locale; }
+    };
+
+    // assert for req
+    req.i18n = i18nDummy;
+    req.t = req.t || t;
+
+    // assert for res -> template
+    if (res.locals) {
+        res.locals.t = t;
+        res.locals.i18n = i18next;
+    }
+
+    i18next.setLng(locale, function() {
+        i18next.persistCookie(req, res, i18next.lng());
+    });
 });
 
 http.createServer(app).listen(http_port);

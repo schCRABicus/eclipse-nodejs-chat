@@ -1,37 +1,27 @@
-
+/*
+    todo : 1) create style for general error handler; 2) try (if it's possible) to fix hard-coded height of the sections
+*/
 /************ Centering ************/
 #outer_container {
-    /*width: 100%;
-    height: 100%;
-    overflow: visible;*/
-
     display: table;
     position: absolute;
     height: 95%;
     width: 98%
 }
 #middle_container {
-    /*width: 100%;
-    text-align: center;*/
-
     display: table-cell;
     vertical-align: middle
 }
 #inner_container {
-    /*width: 200px;*/
-    /*margin-left: auto;
-    margin-right: auto;
-    text-align: left;*/
-
     margin-left: auto;
-    margin-right: auto; /*width: [whatever width you want]*/
+    margin-right: auto;
 }
 
 /************* Block ***********/
 /***** Section page*****/
 
 .block{
-    width:/*760px;*/ 75%;
+    width:75%;
     height:350px; /*75%;*/
     padding:0 20px 0 10px;
     margin:0 auto;
@@ -64,20 +54,29 @@
     box-shadow: 2px 2px 2px #cccccc;
 }
 
+.block.chat_typing_zone{
+    clear : both;
+    height: 200px;
+    margin-top : 30px;
+}
+
 .block_content{
     padding:10px;
 }
 
+.block p{
+    margin:0;
+}
+
+.block-left {
+    float: left;
+}
+
+.block-right {
+    float: right;
+}
+
 /************* Close button ***********/
-/*.block .close{
-    position: absolute;
-    right: -16px;
-    top: -16px;
-    width: 32px;
-    height: 32px;
-    display: block;
-    z-index: 999;
-}*/
 
 .block .close{
 
@@ -87,14 +86,8 @@
     width: 32px;
     height: 32px;
     display: block;
-    z-index: 999;
+    z-index: 100;
 
-    /*display: block;
-    float: right;
-    width: 32px;
-    height: 32px;*/
-
-/*    cursor: pointer;*/
 
     -moz-border-radius: 32px;
     -webkit-border-radius: 32px;
@@ -134,11 +127,14 @@
 .block.about .close{
     background-color: #d15600;
 }
+.block.about a{
+    color:#d15600;
+}
 
 /************* Login *************/
 .block.login h1,
 .block.login .field label{
-    color:/*#73880a;*/olive;
+    color:olive;
 }
 .block.login .close{
     background-color: olive;
@@ -147,10 +143,19 @@
 /************* Logout *************/
 .block.logout h1,
 .block.logout .field label{
-    color:/*#73880a;*/darkolivegreen;
+    color:darkolivegreen;
 }
 .block.logout .close{
     background-color: darkolivegreen;
+}
+
+/************* Chat *************/
+.block.chat h1,
+.block.chat .field label{
+    color: #5F9EA0;
+}
+.block.chat .close{
+    background-color: #5F9EA0;
 }
 
 /************* Register *************/
@@ -162,9 +167,15 @@
     background-color:#3f4c6b;
 }
 
-.block h1.contact{
-    color:/*#d01f3c;*/ #dc143c;
+/************* Contact *************/
+.block.contact h1,
+.block.contact .field label{
+    color:#dc143c;
 }
+.block.contact .close{
+    background-color:#dc143c;
+}
+
 
 .block h3{
     text-shadow:#d1d1d1 1px 1px 0;
@@ -186,7 +197,8 @@
 }
 
 .field [type="text"],
-.field [type="password"]{
+.field [type="password"],
+.field textarea {
     font-size:1.5em;
     padding:8px 4px;
     border:solid 1px #d9dce1;
@@ -212,33 +224,9 @@
     color: #394C5E;
 }
 
-
-
-/*label {
-    font-family: Arial, Verdana;
-    text-shadow: 2px 2px 2px #ccc;
-    display: block;
-    *//*float: left;*//*
-    font-weight: bold;
-    *//*margin-right:10px;
-    text-align: right;*//*
-    width: 120px;
-    line-height: 25px;
-    font-size: 15px;
-}*/
-
-/*input {
-    font-family: Arial, Verdana;
-    font-size: 15px;
-    padding: 5px;
-    border: 1px solid #b9bdc1;
-    width: 300px;
-    color: #797979;
+.style-form {
+    margin-left: 20px;
 }
-
-input:focus {
-    background-color: #E7E8E7;
-}*/
 
 input[type="submit"]{
     background: none repeat scroll 0 0 #4162A8;
@@ -273,6 +261,7 @@ input[type="submit"]:active {
     margin-left: 90px;
 }
 .centered {
+    clear : both;
     margin: 0px auto 10px auto;
     text-align: center;
 }
@@ -280,11 +269,6 @@ input[type="submit"]:active {
 .submitButtonHolder {
     height: 30px;
 }
-/*
-.field {
-    position: relative;
-    margin-bottom: 10px;
-}*/
 
 /*  ----------------Hints------------------  */
 
@@ -296,8 +280,6 @@ input[type="submit"]:active {
     display: block;
     position: absolute;
     white-space: nowrap;
-    /*margin: -30px 0 0 455px;*/
-    /*left: 290px;*/
     left: 100%;
     color: #FFFFFF;
     padding: 7px 10px;
@@ -311,18 +293,12 @@ input[type="submit"]:active {
 
 /*------------------- Validation error tooltip -----------------*/
 p.errorMessage {
-    /*display: table;*/
-    /*position:absolute;
-    left: 200px;
-    top: -5px;*/
+
     display: block;
     position: absolute;
-    /*left: 250px;
-    top: -30px;*/
     white-space: nowrap;
 
     padding:5px 15px 5px 15px;
-    /*margin:1em 0 3em;*/
     color:#ffffff;
     background:#F04349;
 
@@ -343,8 +319,8 @@ p.errorMessage {
 }
 
 p.errorMessage:after {
-    content:"";
-    display:block;  /*reduce the damage in FF3.0*/
+    content: "";
+    display: block;  /*reduce the damage in FF3.0*/
     position:absolute;
     bottom:-10px;
     left:30px;
@@ -355,32 +331,61 @@ p.errorMessage:after {
 }
 /*------------------- End of validation error tooltip -----------------*/
 
+/*-------------------  Contact info-----------------*/
 
-/* Temporary unusable */
-
-.block p{
-    margin:0 0 15px 0;
-}
-.block block
-quote {
-    background: url(../images/quote.png) right bottom no-repeat ;
-    padding: 0 30px;
-    font-style:italic;
-    font-size:16px; display:block; font-weight:bold;
-}
-section#about .block img {float: left;margin: 5px 20px 10px 0;}
-.wp-caption {}.wp-caption-text {}.sticky {}.gallery-caption {}.bypostauthor {}.alignright {}.alignleft {}.aligncenter{}
-.jspVerticalBar{width: 10px;background: none;}
-.jspTrack{
-    width: 1px;
-    background:#e5e9ea;
-}
-.jspDrag{
-    width: 10px;
-    background:#e5e9ea;
-    left:-4px;
-    border-radius:15px;
-    -webkit-border-radius:15px;
-    -moz-border-radius:15px;
+ul.contact{
+    margin:0;
 }
 
+ul.contact li{
+    font-size: 17px;
+    margin:0 0 5px 0;
+    padding:0;
+    font-family: 'YanoneKaffeesatzLight';
+    line-height:19px;
+}
+
+ul.contact li span{
+    font-size:17px;
+}
+
+ul.contact li span a{
+    color:#657089;
+    font-weight: normal;
+}
+/*------------------- End of Contact info -----------------*/
+
+
+.block_content textarea {
+    border: 1px solid #D9DCE1;
+    border-radius: 5px 5px 5px 5px;
+    font-size: 12px;
+    margin: 2px 0 10px 10px;
+    resize: none;
+    padding: 8px 4px;
+}
+
+.chat .block_content textarea {
+    width: 100%;
+}
+
+/*------------------- Ajax Loader -----------------*/
+.ajax-loader-block {
+    position: absolute;
+    width: 100%;
+    height: 350px;
+    display: inline-table;
+    background-color: white;
+    opacity: .5;
+    z-index: 50;
+}
+
+.ajax-loader-block img{
+    display: table-cell;
+    vertical-align: middle;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 120px;
+    opacity: 1;
+}
+/*------------------- End of Ajax Loader -----------------*/
