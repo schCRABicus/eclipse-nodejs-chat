@@ -15,7 +15,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a6f62e2-0dfb-406a-bcce-f3bede7b3241" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <ignored path="eclipse-nodejs-chat.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -112,10 +112,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="package.json" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="26" selection-start="335" selection-end="335" vertical-scroll-proportion="0.0">
+            <state line="17" column="22" selection-start="408" selection-end="408" vertical-scroll-proportion="0.44270834">
               <folding />
             </state>
           </provider>
@@ -157,10 +157,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="36" selection-start="1065" selection-end="1065" vertical-scroll-proportion="0.6770833">
+            <state line="7" column="109" selection-start="197" selection-end="197" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -256,7 +256,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/views/js/frameworks/crab/modules/circledMenu.js" />
         <option value="$PROJECT_DIR$/src/views/js/frameworks/crab/modules/globalMessages.js" />
         <option value="$PROJECT_DIR$/src/controllers/ServerStateController.js" />
         <option value="$PROJECT_DIR$/src/controllers/LocaleController.js" />
@@ -272,6 +271,7 @@
         <option value="$PROJECT_DIR$/src/dao/RecordDAO.js" />
         <option value="$PROJECT_DIR$/src/package.json" />
         <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -715,16 +715,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="26" selection-start="335" selection-end="335" vertical-scroll-proportion="0.0">
+        <state line="7" column="109" selection-start="197" selection-end="197" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="36" selection-start="1065" selection-end="1065" vertical-scroll-proportion="0.6770833">
+        <state line="17" column="22" selection-start="408" selection-end="408" vertical-scroll-proportion="0.44270834">
           <folding />
         </state>
       </provider>
