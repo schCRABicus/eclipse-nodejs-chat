@@ -1,5 +1,5 @@
 var mongoose = require('mongoose'),
-    dburl = 'mongodb://localhost/nodejs-first-chat';
+    dburl = process.env.MONGOLAB_URI || 'mongodb://localhost/nodejs-first-chat';
 
 /**
 * Connects to a database
