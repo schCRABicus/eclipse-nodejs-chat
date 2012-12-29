@@ -36,7 +36,7 @@ var http = require('http'),
 		post:{}
 	},
 	key,
-	http_port = 8124; //port to listen to
+	http_port = process.env.PORT || 8124; //port to listen to
 
 
 app.use(express.bodyParser());     //body parser to process post requests

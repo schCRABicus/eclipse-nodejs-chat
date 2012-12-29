@@ -15,8 +15,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a6f62e2-0dfb-406a-bcce-f3bede7b3241" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
     </list>
     <ignored path="eclipse-nodejs-chat.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -113,10 +112,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="package.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="26" selection-start="335" selection-end="335" vertical-scroll-proportion="0.33854166">
+            <state line="13" column="26" selection-start="335" selection-end="335" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -158,10 +157,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="16" selection-start="1787" selection-end="1787" vertical-scroll-proportion="0.0">
+            <state line="38" column="36" selection-start="1065" selection-end="1065" vertical-scroll-proportion="0.6770833">
               <folding />
             </state>
           </provider>
@@ -265,7 +264,6 @@
         <option value="$PROJECT_DIR$/src/locales/translation-en.json" />
         <option value="$PROJECT_DIR$/src/locales/translation-ru.json" />
         <option value="$PROJECT_DIR$/src/controllers/GlobalController.js" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/src/views/css/auth.css" />
         <option value="$PROJECT_DIR$/src/views/js/frameworks/crab/modules/chat.js" />
         <option value="$PROJECT_DIR$/src/views/main.html" />
@@ -273,6 +271,7 @@
         <option value="$PROJECT_DIR$/src/views/js/frameworks/crab/crabmce.js" />
         <option value="$PROJECT_DIR$/src/dao/RecordDAO.js" />
         <option value="$PROJECT_DIR$/src/package.json" />
+        <option value="$PROJECT_DIR$/app.js" />
       </list>
     </option>
   </component>
@@ -653,13 +652,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="16" selection-start="1787" selection-end="1787" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/services/RecordService.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="145" column="37" selection-start="3458" selection-end="3458" vertical-scroll-proportion="0.0">
@@ -725,7 +717,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="26" selection-start="335" selection-end="335" vertical-scroll-proportion="0.33854166">
+        <state line="13" column="26" selection-start="335" selection-end="335" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="36" selection-start="1065" selection-end="1065" vertical-scroll-proportion="0.6770833">
           <folding />
         </state>
       </provider>
