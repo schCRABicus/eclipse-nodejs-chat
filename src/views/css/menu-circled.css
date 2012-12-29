@@ -149,10 +149,10 @@ body {
     margin-top: 5px;
 }
 #locale_en{
-    background: url('imgs/icon_en.png') no-repeat;
+    background: url('imgs/icon-en.png') no-repeat;
 }
 
 #locale_ru{
-    background: url('imgs/icon_ru.png') no-repeat;
+    background: url('imgs/icon-ru.png') no-repeat;
 }
 
