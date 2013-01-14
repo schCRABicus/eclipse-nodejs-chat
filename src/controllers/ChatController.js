@@ -303,10 +303,11 @@ function getPeriodRecordsCount(req, res){
  */
 function addRecord(req, res){
 	var record = {
-		date : new Date(),
-		record : req.body.record,
-		authorId : req.session.user._id
-	};
+            date : new Date(),
+            record : req.body.record,
+            authorId : req.session.user._id
+        },
+        login = req.session.user.login;
 
 	RecordService.addRecord(record, function(err){
 		if (!err){
@@ -314,7 +315,7 @@ function addRecord(req, res){
 					date : record.date,
 					record : record.record,
 					authorId : {
-						login : record.authorId
+						login : login
 					}
 				});
 			res.json({status : "ok" });
